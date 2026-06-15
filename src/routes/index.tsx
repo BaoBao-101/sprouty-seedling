@@ -1,29 +1,20 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useCallback } from "react";
+
+import { LandingPage } from "../pages-sprouty/LandingPage.jsx";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
-    ],
-  }),
-  component: Index,
+  component: IndexRoute,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+function IndexRoute() {
+  const navigate = useNavigate();
+  const go = useCallback(
+    (path: string) => {
+      navigate({ to: path as never });
+      if (typeof window !== "undefined") window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    [navigate],
   );
+  return <LandingPage setPage={go} />;
 }

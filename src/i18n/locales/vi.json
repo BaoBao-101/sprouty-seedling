@@ -1,0 +1,295 @@
+{
+  "nav": {
+    "home": "Trang Chủ",
+    "myGarden": "Vườn Của Tôi",
+    "memoryTree": "Cây Kỷ Niệm",
+    "plantBuddies": "Bạn Cây",
+    "workshop": "Workshop",
+    "vip": "VIP ✨",
+    "signIn": "Đăng Nhập",
+    "register": "Đăng Ký",
+    "signOut": "Đăng Xuất",
+    "aria": {
+      "main": "Điều hướng chính",
+      "home": "Trang chủ Sprouty",
+      "userGarden": "Vườn của {{name}}",
+      "signOut": "Đăng xuất",
+      "openMenu": "Mở menu điều hướng",
+      "closeMenu": "Đóng menu điều hướng"
+    }
+  },
+  "landing": {
+    "hero": {
+      "badge": "🌍 Kỷ Niệm Từ Thiên Nhiên Cho Gia Đình",
+      "title": { "grow": "Gieo", "memories": "Ký Niệm", "together": "Cùng Nhau" },
+      "subtitle": "Gieo hạt giống thật, vẽ chậu cây, và ngắm kỷ niệm nở hoa — thế giới diệu kỳ của riêng bé.",
+      "ctaTree": "🌳 Xem Cây Kỷ Niệm",
+      "ctaKit": "🎨 Nhận Bộ Kit"
+    },
+    "stats": {
+      "families": "Gia đình 🌱",
+      "memories": "Kỷ niệm 📸",
+      "rating": "Đánh giá"
+    },
+    "ai": {
+      "title": "Lời Nhắn Từ Bạn Cây AI",
+      "subtitle": "Thử một lời nhắn diệu kỳ từ cây của bạn!",
+      "badge": "✨ AI",
+      "thinking": "Đang nghĩ điều gì đó diệu kỳ...",
+      "placeholder": "Nhấn nút bên dưới ✨",
+      "generating": "✨ Đang tạo...",
+      "generate": "✨ Tạo Lời Nhắn AI",
+      "messages": [
+        "Bạn Cà Chua vừa ra lá mới hôm nay 🍅🌱 Nhớ tưới nước nhé!",
+        "Bạn và cây đang lớn lên cùng nhau! 💚",
+        "Bé Mia đang trở thành một người làm vườn cừ khôi! 🌟",
+        "Bạn cây nhớ bạn hôm nay đó 🥺🌿 Đến giờ tưới nước rồi!",
+        "Đã 3 tuần bên nhau! Cây của bạn đã có 7 kỷ niệm diệu kỳ! 🌳"
+      ]
+    },
+    "features": {
+      "badge": "🌿 Tất Cả Trong Một Thế Giới Diệu Kỳ",
+      "heading": "Điều Gì Khiến Sprouty Đặc Biệt",
+      "items": {
+        "tree":   { "title": "Cây Kỷ Niệm Số", "desc": "Mỗi chiếc lá lưu một ảnh, video hay nhật ký. Ngắm cây lớn lên cùng bé." },
+        "pot":    { "title": "Vẽ Chậu Của Bé", "desc": "Trang trí chậu đất nung thật bằng màu acrylic. Mỗi chậu là một tác phẩm độc nhất." },
+        "ai":     { "title": "Phép Màu Câu Chuyện AI", "desc": "AI tạo chú thích dễ thương và tóm tắt câu chuyện hàng tháng để mỗi kỷ niệm có câu chuyện cổ tích riêng." },
+        "buddy":  { "title": "Bộ Sưu Tập Bạn Cây", "desc": "Sưu tầm những bạn cây hiếm có tính cách, giai đoạn và sức mạnh đặc biệt để mở khóa." },
+        "vip":    { "title": "Khu Vườn Vàng VIP", "desc": "Mở khóa chế độ ban đêm, hiệu ứng theo mùa và cây kỷ niệm vàng huyền thoại." },
+        "family": { "title": "Kỷ Niệm Gia Đình", "desc": "Chia sẻ cột mốc với ông bà. In cây của bạn thành sách ảnh lưu niệm." }
+      }
+    },
+    "cta": {
+      "heading": "Mỗi mầm cây nhỏ đều có câu chuyện. 🌱",
+      "subtitle": "Bắt đầu hôm nay. Cây kỷ niệm của bạn đang chờ nở hoa.",
+      "start": "🌳 Bắt Đầu Miễn Phí",
+      "gift": "🎁 Tặng Một Bộ Kit"
+    }
+  },
+  "login": {
+    "titleLogin": "Chào mừng trở lại!",
+    "titleRegister": "Tham gia Sprouty!",
+    "subtitleLogin": "Cây Kỷ Niệm đang chờ bạn 🌳",
+    "subtitleRegister": "Bắt đầu hành trình trồng cây kỳ diệu 🌱",
+    "nameLabel": "Tên bé 👶",
+    "namePlaceholder": "VD: Mia, Nam, Hana...",
+    "emailLabel": "Email phụ huynh 📧",
+    "passwordLabel": "Mật khẩu 🔒",
+    "passwordPlaceholder": "Ít nhất 6 ký tự",
+    "processing": "🌱 Đang xử lý...",
+    "submitLogin": "🌳 Vào Vườn Của Tôi",
+    "submitRegister": "🌱 Trồng Ký Ức Đầu Tiên",
+    "switchToRegister": "Chưa có tài khoản? Đăng ký ngay →",
+    "switchToLogin": "Đã có tài khoản? Đăng nhập →",
+    "trust": "🔒 An toàn cho trẻ em · Không quảng cáo · Bảo mật gia đình",
+    "demo": "→ Dùng thử ngay, không cần đăng ký",
+    "errors": {
+      "name": "Vui lòng nhập tên bé",
+      "email": "Email không hợp lệ",
+      "password": "Mật khẩu cần ít nhất 6 ký tự",
+      "server": "Email hoặc mật khẩu không đúng. Thử lại nhé!"
+    },
+    "toast": { "welcome": "Chào mừng trở lại Sprouty! 🌱" }
+  },
+  "register": {
+    "title": "Tham gia Sprouty!",
+    "subtitle": "Bắt đầu hành trình trồng cây kỳ diệu 🌱",
+    "nameLabel": "Tên bé 👶",
+    "namePlaceholder": "VD: Mia, Nam, Hana...",
+    "emailLabel": "Email phụ huynh 📧",
+    "passwordLabel": "Mật khẩu 🔒",
+    "passwordPlaceholder": "Ít nhất 6 ký tự",
+    "processing": "🌱 Đang xử lý...",
+    "submit": "🌱 Trồng Ký Ức Đầu Tiên",
+    "preselected": "Sản phẩm đã chọn",
+    "switchToLogin": "Đã có tài khoản? Đăng nhập →",
+    "trust": "🔒 An toàn cho trẻ em · Không quảng cáo · Bảo mật gia đình",
+    "errors": {
+      "name": "Vui lòng nhập tên bé",
+      "email": "Email không hợp lệ",
+      "password": "Mật khẩu cần ít nhất 6 ký tự",
+      "server": "Đã có lỗi xảy ra. Thử lại nhé!"
+    },
+    "toast": {
+      "welcome": "Chào mừng đến với Sprouty! 🌱",
+      "withProduct": "Chào mừng! Đơn hàng {{name}} đã ghi nhận — chúng tôi liên hệ trong 24h 🌱",
+      "withVIP": "Chào mừng VIP! Chúng tôi sẽ liên hệ để kích hoạt gói VIP của bạn 🌟"
+    }
+  },
+  "dashboard": {
+    "greeting": "Chào buổi sáng, {{name}}! 🌞",
+    "subtitle": "Vườn của bạn trông thật kỳ diệu hôm nay 🌿",
+    "paymentSuccess": "Thanh toán thành công! Tài khoản đã được cập nhật 🎉",
+    "notif": {
+      "from": "Từ: Bạn Cà Chua",
+      "msg": "Chào {{name}}! Bạn và mình đang lớn lên cùng nhau 🌱 Cảm ơn bạn đã tưới nước cho mình hôm nay. Mình yêu bạn đến tận mặt trăng! 🌙"
+    },
+    "plant": {
+      "day": "Ngày thứ {{n}} cùng nhau",
+      "progress": "Tiến trình phát triển",
+      "sprouted": "🌱 Nảy mầm",
+      "ready": "🍅 Sẵn sàng!",
+      "water": "Tưới nước",
+      "waterVal": "Lần cuối: hôm nay",
+      "sun": "Ánh sáng",
+      "sunVal": "Cần thêm",
+      "growth": "Tăng trưởng",
+      "growthVal": "+2cm tuần này"
+    },
+    "tree": {
+      "title": "🌳 Cây Kỷ Niệm",
+      "subtitle": "7 ký ức đã lưu · Nhấn để khám phá",
+      "open": "Mở Cây 🌳"
+    },
+    "actions": {
+      "addMemory": "Thêm Ký Ức",
+      "myPlants": "Cây Của Tôi",
+      "workshop": "Workshop",
+      "vipGarden": "Vườn VIP",
+      "activateKit": "Kích Hoạt Kit"
+    },
+    "memories": {
+      "title": "Ký Ức Gần Đây ✨",
+      "seeAll": "Xem tất cả →",
+      "aiCaption": "✨ AI Caption"
+    }
+  },
+  "vip": {
+    "badge": "🌟 VIP Experience",
+    "title": "The Golden Garden ✨",
+    "subtitle": "Mở khóa thế giới ban đêm kỳ diệu. Cây hiếm, cây vàng và những điều kỳ diệu theo mùa.",
+    "dayMode": "☀️ Chế độ ban ngày",
+    "nightMode": "🌙 Xem trước chế độ ban đêm",
+    "plans": {
+      "monthly": { "name": "VIP Hàng tháng", "period": "/tháng", "btn": "Bắt đầu VIP" },
+      "annual":  { "name": "VIP Hàng năm",   "period": "/năm",  "save": "Tiết kiệm 25%", "btn": "✨ Đăng ký hàng năm" }
+    },
+    "footer": "🔒 Huỷ bất cứ lúc nào · An toàn cho gia đình · Không quảng cáo",
+    "stripeLoading": "Đang chuyển đến Stripe...",
+    "stripeError": "Không thể kết nối thanh toán. Thử lại sau.",
+    "stripeUnavailable": "Thanh toán chưa khả dụng ở chế độ demo."
+  },
+  "tree": {
+    "badge": "🌳 Tính năng chính",
+    "memoriesCount": "Mỗi chiếc lá là một ký ức kỳ diệu · {{count}} ký ức đã lưu",
+    "leafProgress": "{{count}}/{{max}} ký ức · Nhấn vào lá để xem ✨",
+    "tapLeaf": "Nhấn",
+    "addMemory": "🌿 Trồng Một Ký Ức Mới",
+    "timeline": {
+      "title": "📅 Dòng thời gian",
+      "empty": "Chưa có ký ức nào — hãy trồng chiếc lá đầu tiên! 🌱",
+      "week": "Tuần {{n}}",
+      "ai": "✨ AI"
+    },
+    "upload": {
+      "photo": "Ảnh", "video": "Video", "journal": "Nhật ký",
+      "dropJournal": "Viết nhật ký bên dưới",
+      "dropFile": "Nhấn để tải lên hoặc kéo vào đây",
+      "fileHint": "JPG, PNG · Tự động nén → WebP ≤300 KB · MP4 ≤2 MB",
+      "compressing": "🌀 Đang nén ảnh...",
+      "compressed": "✅ Đã nén: {{size}} KB (WebP)",
+      "videoReady": "✅ Video hợp lệ · {{size}} MB",
+      "videoTooBig": "⚠️ Video quá lớn ({{size}} MB) · Tối đa 2 MB",
+      "compressError": "Không thể nén ảnh. Vui lòng thử lại.",
+      "unsupportedFile": "Định dạng không được hỗ trợ",
+      "clickToChange": "Nhấn để đổi file khác",
+      "clickToRetry": "Nhấn để thử lại",
+      "titleLabel": "Tiêu đề ký ức 🌟",
+      "captionLabel": "Mô tả khoảnh khắc ✍️",
+      "aiBtn": "✨ AI Caption", "aiLoading": "🌀 Đang tạo...",
+      "captionPlaceholder": "Kể về khoảnh khắc này... hoặc để AI viết cho bạn ✨",
+      "save": "🌿 Lưu vào Cây Của Tôi", "saving": "🌱 Đang lưu...",
+      "toast": "Ký ức đã được lưu vào Cây Kỷ Niệm! 🌿",
+      "uploadError": "Tải lên thất bại. Vui lòng thử lại 😢",
+      "defaultTitle": "Ký ức #{{n}}", "defaultCaption": "Một khoảnh khắc tuyệt vời 💚"
+    },
+    "detail": {
+      "aiCaption": "✨ AI Caption",
+      "like": "💚 Yêu khoảnh khắc này!",
+      "share": "📤 Chia sẻ"
+    }
+  },
+  "plants": {
+    "badge": "🌿 Sưu tầm tất cả",
+    "title": "Bạn Cây",
+    "subtitle": "Mỗi bạn cây có tính cách, giai đoạn để mở khóa và kỷ niệm để cùng lớn lên.",
+    "day": "Ngày {{n}}",
+    "growthStages": "Giai đoạn phát triển",
+    "fullyGrown": "🎉 Đã trưởng thành! Huyền thoại!",
+    "stageProgress": "Giai đoạn {{current}}/{{max}} · Tiếp tục nào!",
+    "modal": {
+      "growthJourney": "Hành trình phát triển",
+      "stage": "G{{n}}",
+      "addMemory": "📸 Thêm Ký Ức"
+    }
+  },
+  "workshop": {
+    "badge": "🎨 Kit & Workshop thủ công",
+    "title": "Xưởng Sprouty",
+    "subtitle": "Tất cả những gì bé cần để tô màu, trồng cây và lớn lên — trong một hộp kỳ diệu.",
+    "upcomingTitle": "🗓️ Lịch Workshop sắp tới",
+    "spotsLeft": "Còn {{n}} chỗ",
+    "pricingTitle": "💰 Chọn gói phù hợp",
+    "popular": "⭐ Phổ biến nhất",
+    "register": "Đăng ký →",
+    "orderBtn": "🛒 Đặt {{name}}",
+    "howItWorks": [
+      { "icon": "🎨", "title": "Tô màu chậu",      "desc": "Dùng màu acrylic để tô chậu theo ý thích. Chậu của bạn, nghệ thuật của bạn — không chậu nào giống chậu nào!" },
+      { "icon": "🌱", "title": "Chọn Plant Buddy",  "desc": "Chọn bạn cây yêu thích — cà chua, ớt, đậu hay bắp. Mỗi bé đều có tính cách riêng!" },
+      { "icon": "💧", "title": "Cùng nhau lớn lên", "desc": "Tưới nước mỗi ngày, nhìn cây lớn dần. Mỗi cột mốc thêm một lá mới lên Cây Kỷ Niệm số!" },
+      { "icon": "📸", "title": "Lưu giữ ký ức",    "desc": "Chụp ảnh, quay video, viết nhật ký. Cây số của bạn nở hoa theo mỗi ký ức!" }
+    ],
+    "order": {
+      "title": "🛒 Đặt hàng",
+      "product": "Sản phẩm 🛍️",
+      "nameLabel": "Tên phụ huynh / bé 👶", "namePlaceholder": "VD: Chị Lan, bé Mia...",
+      "emailLabel": "Email liên hệ 📧",
+      "noteLabel": "Ghi chú thêm 📝", "noteOptional": "(tuỳ chọn)",
+      "notePlaceholder": "Địa chỉ giao hàng, yêu cầu đặc biệt...",
+      "submit": "🛒 Đặt hàng · {{price}}",
+      "noPayment": "Không cần thanh toán ngay · Chúng tôi liên hệ xác nhận trước",
+      "errors": { "name": "Vui lòng nhập tên", "email": "Email không hợp lệ" },
+      "stripeBtn": "💳 Thanh toán với Stripe",
+      "stripeLoading": "Đang chuyển đến Stripe...",
+      "stripeError": "Không thể kết nối thanh toán. Thử lại sau.",
+      "stripeUnavailable": "Thanh toán chưa khả dụng ở chế độ demo.",
+      "stripeNote": "🔒 Bảo mật bởi Stripe · Huỷ bất cứ lúc nào"
+    }
+  },
+  "chat": {
+    "modes": { "sales": "🛒 Tư vấn sản phẩm", "care": "🌿 Trợ lý chăm cây", "stem": "🔧 STEM Mentor" },
+    "placeholder": "Nhắn tin...",
+    "aria": { "close": "Đóng chat", "open": "Mở chat", "send": "Gửi tin nhắn" },
+    "kitCard": { "view": "Xem chi tiết →" },
+    "workshopCard": { "register": "Đăng ký ngay →" },
+    "upsellCard": {
+      "title": "STEM Mentor", "subtitle": "Dành cho gói Advanced",
+      "desc": "Nâng cấp lên ESP32 Advanced Kit để mở khóa hướng dẫn Arduino C++, Firebase và IoT chuyên sâu! 🚀",
+      "btn": "Nâng cấp ngay ✨"
+    }
+  },
+  "activate": {
+    "title": "Kích Hoạt Kit",
+    "hint": "Nhập mã PIN trên hộp Kit hoặc quét mã QR để kích hoạt bạn cây mới.",
+    "pinLabel": "Mã PIN 🎁",
+    "pinPlaceholder": "VD: SPRT1234",
+    "scanBtn": "📷 Quét mã QR từ hộp Kit",
+    "scanUnsupported": "📷 Quét QR không được hỗ trợ — hãy nhập mã PIN",
+    "scanning": "Đang quét... hướng camera vào mã QR",
+    "activateBtn": "🌱 Kích Hoạt Cây",
+    "activating": "🌱 Đang kích hoạt...",
+    "footer": "Mỗi mã PIN chỉ dùng được một lần · Bên trong hộp Kit Sprouty",
+    "successMsg": "Bạn cây mới đã được thêm vào vườn của bạn! 🎉",
+    "successBtn": "Xem Vườn Của Tôi 🌿",
+    "errorFormat": "Mã PIN không hợp lệ — phải là 6–10 ký tự chữ và số.",
+    "errorNotFound": "Mã PIN không tồn tại. Kiểm tra lại hộp Kit nhé.",
+    "errorUsed": "Mã PIN này đã được sử dụng. Mỗi mã chỉ dùng một lần.",
+    "errorYours": "Bạn đã kích hoạt mã này rồi.",
+    "errorAuth": "Vui lòng đăng nhập để kích hoạt Kit.",
+    "errorDemo": "Kích hoạt Kit không khả dụng ở chế độ demo.",
+    "errorGeneric": "Có lỗi xảy ra. Thử lại sau nhé."
+  },
+  "language": {
+    "select": "Chọn ngôn ngữ"
+  }
+}

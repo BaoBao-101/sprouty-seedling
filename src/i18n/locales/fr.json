@@ -1,0 +1,294 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "myGarden": "Mon Jardin",
+    "memoryTree": "Arbre à Souvenirs",
+    "plantBuddies": "Amis Plantes",
+    "workshop": "Atelier",
+    "vip": "VIP ✨",
+    "signIn": "Se Connecter",
+    "register": "S'inscrire",
+    "signOut": "Se Déconnecter",
+    "aria": {
+      "main": "Navigation principale",
+      "home": "Accueil Sprouty",
+      "userGarden": "Le jardin de {{name}}",
+      "signOut": "Se déconnecter",
+      "openMenu": "Ouvrir le menu de navigation",
+      "closeMenu": "Fermer le menu de navigation"
+    }
+  },
+  "landing": {
+    "hero": {
+      "badge": "🌍 Des souvenirs au naturel pour les familles",
+      "title": { "grow": "Cultivez des", "memories": "Souvenirs", "together": "Ensemble" },
+      "subtitle": "Plantez de vraies graines, peignez votre pot et regardez les souvenirs éclore — le monde magique rien que pour votre enfant.",
+      "ctaTree": "🌳 Voir l'Arbre à Souvenirs",
+      "ctaKit": "🎨 Obtenir votre kit"
+    },
+    "stats": {
+      "families": "Familles 🌱",
+      "memories": "Souvenirs 📸",
+      "rating": "Note"
+    },
+    "ai": {
+      "title": "Message de l'Ami Plante IA",
+      "subtitle": "Essayez un message magique de votre plante !",
+      "badge": "✨ IA",
+      "thinking": "On imagine quelque chose de magique...",
+      "placeholder": "Appuyez sur le bouton ci-dessous ✨",
+      "generating": "✨ Génération...",
+      "generate": "✨ Générer un message IA",
+      "messages": [
+        "Tomate l'Ami a fait une nouvelle feuille aujourd'hui 🍅🌱 Continuez à l'arroser !",
+        "Toi et ton ami grandissez ensemble ! 💚",
+        "La petite Mia devient une vraie jardinière ! 🌟",
+        "Ton ami plante pense à toi aujourd'hui 🥺🌿 Il est temps d'arroser !",
+        "Déjà 3 semaines ensemble ! Ton arbre compte 7 souvenirs magiques ! 🌳"
+      ]
+    },
+    "features": {
+      "badge": "🌿 Tout dans un seul monde magique",
+      "heading": "Ce qui rend Sprouty si spécial",
+      "items": {
+        "tree":   { "title": "Arbre à Souvenirs Numérique", "desc": "Chaque feuille contient une photo, une vidéo ou une note. Regardez votre arbre grandir avec votre enfant." },
+        "pot":    { "title": "Peignez votre pot", "desc": "Décorez un vrai pot en terre cuite avec de la peinture acrylique. Chaque pot est une œuvre unique." },
+        "ai":     { "title": "La Magie des Histoires IA", "desc": "L'IA crée de jolies légendes et des récits mensuels pour que chaque souvenir ait son conte de fées." },
+        "buddy":  { "title": "Collection d'Amis Plantes", "desc": "Collectionnez des amis plantes rares avec leur caractère, leurs étapes et leurs pouvoirs spéciaux à débloquer." },
+        "vip":    { "title": "Jardin Doré VIP", "desc": "Débloquez le mode nuit, les effets saisonniers et le légendaire arbre à souvenirs doré." },
+        "family": { "title": "Souvenirs en Famille", "desc": "Partagez les grands moments avec les grands-parents. Imprimez votre arbre en album souvenir." }
+      }
+    },
+    "cta": {
+      "heading": "Chaque petite pousse a son histoire. 🌱",
+      "subtitle": "Commencez la vôtre aujourd'hui. Votre arbre à souvenirs n'attend que de fleurir.",
+      "start": "🌳 Commencer gratuitement",
+      "gift": "🎁 Offrir un kit"
+    }
+  },
+  "login": {
+    "titleLogin": "Bon retour !",
+    "titleRegister": "Rejoignez Sprouty !",
+    "subtitleLogin": "Votre Arbre à Souvenirs vous attend 🌳",
+    "subtitleRegister": "Commencez votre voyage magique de jardinage 🌱",
+    "nameLabel": "Prénom de l'enfant 👶",
+    "namePlaceholder": "Ex. Léa, Tom, Mia...",
+    "emailLabel": "Email du parent 📧",
+    "passwordLabel": "Mot de passe 🔒",
+    "passwordPlaceholder": "Au moins 6 caractères",
+    "processing": "🌱 En cours...",
+    "submitLogin": "🌳 Entrer dans Mon Jardin",
+    "submitRegister": "🌱 Planter Mon Premier Souvenir",
+    "switchToRegister": "Pas encore de compte ? S'inscrire →",
+    "switchToLogin": "Déjà un compte ? Se connecter →",
+    "trust": "🔒 Sécurisé pour les enfants · Sans pub · Vie privée familiale",
+    "demo": "→ Essayer sans s'inscrire",
+    "errors": {
+      "name": "Veuillez entrer un prénom",
+      "email": "Adresse e-mail invalide",
+      "password": "Le mot de passe doit comporter au moins 6 caractères",
+      "server": "E-mail ou mot de passe incorrect. Réessayez !"
+    },
+    "toast": { "welcome": "Bon retour sur Sprouty ! 🌱" }
+  },
+  "register": {
+    "title": "Rejoignez Sprouty !",
+    "subtitle": "Commencez votre voyage magique de jardinage 🌱",
+    "nameLabel": "Prénom de l'enfant 👶",
+    "namePlaceholder": "Ex. Léa, Tom, Mia...",
+    "emailLabel": "Email du parent 📧",
+    "passwordLabel": "Mot de passe 🔒",
+    "passwordPlaceholder": "Au moins 6 caractères",
+    "processing": "🌱 En cours...",
+    "submit": "🌱 Planter Mon Premier Souvenir",
+    "preselected": "Produit sélectionné",
+    "switchToLogin": "Déjà un compte ? Se connecter →",
+    "trust": "🔒 Sécurisé pour les enfants · Sans pub · Vie privée familiale",
+    "errors": {
+      "name": "Veuillez entrer un prénom",
+      "email": "Adresse e-mail invalide",
+      "password": "Le mot de passe doit comporter au moins 6 caractères",
+      "server": "Une erreur s'est produite. Réessayez !"
+    },
+    "toast": {
+      "welcome": "Bienvenue sur Sprouty ! 🌱",
+      "withProduct": "Bienvenue ! Commande {{name}} notée — nous vous contacterons sous 24h 🌱",
+      "withVIP": "Bienvenue VIP ! Nous vous contacterons pour activer votre forfait VIP 🌟"
+    }
+  },
+  "dashboard": {
+    "greeting": "Bonjour, {{name}} ! 🌞",
+    "subtitle": "Votre jardin est magnifique aujourd'hui 🌿",
+    "paymentSuccess": "Paiement réussi ! Votre compte a été mis à jour 🎉",
+    "notif": {
+      "from": "De : Tomate l'Ami",
+      "msg": "Bonjour {{name}} ! On grandit ensemble 🌱 Merci de m'avoir arrosé aujourd'hui. Je t'aime jusqu'à la lune ! 🌙"
+    },
+    "plant": {
+      "day": "Jour {{n}} ensemble",
+      "progress": "Progression",
+      "sprouted": "🌱 Germé",
+      "ready": "🍅 Prêt !",
+      "water": "Arrosage",
+      "waterVal": "Dernier : aujourd'hui",
+      "sun": "Lumière",
+      "sunVal": "Besoin de plus",
+      "growth": "Croissance",
+      "growthVal": "+2cm cette semaine"
+    },
+    "tree": {
+      "title": "🌳 Arbre à Souvenirs",
+      "subtitle": "7 souvenirs sauvegardés · Appuyer pour explorer",
+      "open": "Ouvrir l'Arbre 🌳"
+    },
+    "actions": {
+      "addMemory": "Ajouter un Souvenir",
+      "myPlants": "Mes Plantes",
+      "workshop": "Atelier",
+      "vipGarden": "Jardin VIP",
+      "activateKit": "Activer Kit"
+    },
+    "memories": {
+      "title": "Souvenirs Récents ✨",
+      "seeAll": "Tout voir →",
+      "aiCaption": "✨ Légende IA"
+    }
+  },
+  "vip": {
+    "badge": "🌟 Expérience VIP",
+    "title": "Le Jardin Doré ✨",
+    "subtitle": "Découvrez le monde nocturne magique. Plantes rares, arbres dorés et merveilles saisonnières.",
+    "dayMode": "☀️ Mode Jour",
+    "nightMode": "🌙 Aperçu Mode Nuit",
+    "plans": {
+      "monthly": { "name": "VIP Mensuel",  "period": "/mois", "btn": "Démarrer VIP" },
+      "annual":  { "name": "VIP Annuel",   "period": "/an",  "save": "Économisez 25 %", "btn": "✨ S'abonner annuellement" }
+    },
+    "footer": "🔒 Résiliable à tout moment · Sécurisé pour la famille · Sans publicité",
+    "stripeLoading": "Redirection vers Stripe...",
+    "stripeError": "Impossible de se connecter au paiement. Réessayez.",
+    "stripeUnavailable": "Paiement non disponible en mode démo."
+  },
+  "tree": {
+    "badge": "🌳 Fonctionnalité principale",
+    "memoriesCount": "Chaque feuille est un souvenir magique · {{count}} souvenirs sauvegardés",
+    "leafProgress": "{{count}}/{{max}} souvenirs · Appuyez sur une feuille ✨",
+    "tapLeaf": "Ouvrir",
+    "addMemory": "🌿 Planter un Nouveau Souvenir",
+    "timeline": {
+      "title": "📅 Chronologie",
+      "empty": "Aucun souvenir pour l'instant — plantez votre première feuille ! 🌱",
+      "week": "Semaine {{n}}",
+      "ai": "✨ IA"
+    },
+    "upload": {
+      "photo": "Photo", "video": "Vidéo", "journal": "Journal",
+      "dropJournal": "Écrivez votre entrée de journal ci-dessous",
+      "dropFile": "Cliquez pour télécharger ou glissez ici",
+      "fileHint": "JPG, PNG · Compressé auto → WebP ≤300 Ko · MP4 ≤2 Mo",
+      "compressing": "🌀 Compression en cours...",
+      "compressed": "✅ Compressé : {{size}} Ko (WebP)",
+      "videoReady": "✅ Vidéo OK · {{size}} Mo",
+      "videoTooBig": "⚠️ Vidéo trop grande ({{size}} Mo) · Max 2 Mo",
+      "compressError": "Impossible de compresser l'image. Essayez un autre fichier.",
+      "unsupportedFile": "Format de fichier non pris en charge",
+      "clickToChange": "Cliquez pour choisir un autre fichier",
+      "clickToRetry": "Cliquez pour réessayer",
+      "titleLabel": "Titre du souvenir 🌟",
+      "captionLabel": "Décrivez le moment ✍️",
+      "aiBtn": "✨ Légende IA", "aiLoading": "🌀 Génération...",
+      "captionPlaceholder": "Racontez l'histoire... ou laissez l'IA l'écrire ✨",
+      "save": "🌿 Sauvegarder dans Mon Arbre", "saving": "🌱 Sauvegarde...",
+      "toast": "Souvenir ajouté à votre Arbre à Souvenirs ! 🌿",
+      "uploadError": "Échec du téléchargement. Veuillez réessayer 😢",
+      "defaultTitle": "Souvenir #{{n}}", "defaultCaption": "Un moment merveilleux 💚"
+    },
+    "detail": {
+      "aiCaption": "✨ Légende IA",
+      "like": "💚 J'adore ce moment !",
+      "share": "📤 Partager"
+    }
+  },
+  "plants": {
+    "badge": "🌿 Attrapez-les tous",
+    "title": "Amis Plantes",
+    "subtitle": "Chaque ami a une personnalité, des étapes à débloquer et des souvenirs à partager.",
+    "day": "Jour {{n}}",
+    "growthStages": "Étapes de croissance",
+    "fullyGrown": "🎉 Pleinement développé ! Légendaire !",
+    "stageProgress": "Étape {{current}} sur {{max}} · Continuez !",
+    "modal": {
+      "growthJourney": "Parcours de croissance",
+      "stage": "É{{n}}",
+      "addMemory": "📸 Ajouter un Souvenir"
+    }
+  },
+  "workshop": {
+    "badge": "🎨 Kits & Ateliers créatifs",
+    "title": "Atelier Sprouty",
+    "subtitle": "Tout ce dont votre enfant a besoin pour peindre, cultiver et s'épanouir — dans une boîte magique.",
+    "upcomingTitle": "🗓️ Prochains Ateliers",
+    "spotsLeft": "{{n}} places restantes",
+    "pricingTitle": "💰 Choisissez votre formule",
+    "popular": "⭐ Le plus populaire",
+    "register": "S'inscrire →",
+    "orderBtn": "🛒 Commander {{name}}",
+    "howItWorks": [
+      { "icon": "🎨", "title": "Peignez votre pot",        "desc": "Utilisez de la peinture acrylique pour décorer votre pot comme vous le souhaitez. Votre pot, votre art !" },
+      { "icon": "🌱", "title": "Choisissez un Ami Plante", "desc": "Choisissez votre compagnon préféré — tomate, piment, haricot ou maïs. Chacun a sa propre personnalité !" },
+      { "icon": "💧", "title": "Grandissez ensemble",      "desc": "Arrosez chaque jour et regardez votre plante grandir. Chaque étape ajoute une nouvelle feuille à votre arbre !" },
+      { "icon": "📸", "title": "Capturez les souvenirs",   "desc": "Prenez des photos, filmez, écrivez. Votre arbre numérique fleurit à chaque souvenir !" }
+    ],
+    "order": {
+      "title": "🛒 Passer commande",
+      "product": "Produit 🛍️",
+      "nameLabel": "Nom du parent / enfant 👶", "namePlaceholder": "Ex. Marie, Tom...",
+      "emailLabel": "E-mail de contact 📧",
+      "noteLabel": "Notes supplémentaires 📝", "noteOptional": "(facultatif)",
+      "notePlaceholder": "Adresse de livraison, demandes spéciales...",
+      "submit": "🛒 Commander · {{price}}",
+      "noPayment": "Pas de paiement immédiat · Nous vous contactons pour confirmer",
+      "stripeBtn": "💳 Payer avec Stripe",
+      "stripeLoading": "Redirection vers Stripe...",
+      "stripeError": "Impossible de se connecter au paiement. Réessayez.",
+      "stripeUnavailable": "Paiement non disponible en mode démo.",
+      "stripeNote": "🔒 Sécurisé par Stripe · Résiliable à tout moment"
+    }
+  },
+  "chat": {
+    "modes": { "sales": "🛒 Conseiller produit", "care": "🌿 Assistant jardinage", "stem": "🔧 Mentor STEM" },
+    "placeholder": "Message...",
+    "aria": { "close": "Fermer le chat", "open": "Ouvrir le chat", "send": "Envoyer" },
+    "kitCard": { "view": "Voir les détails →" },
+    "workshopCard": { "register": "S'inscrire →" },
+    "upsellCard": {
+      "title": "Mentor STEM", "subtitle": "Formule Advanced uniquement",
+      "desc": "Passez à l'ESP32 Advanced Kit pour débloquer les guides Arduino C++, Firebase et IoT avancé ! 🚀",
+      "btn": "Passer à la version supérieure ✨"
+    }
+  },
+  "activate": {
+    "title": "Activer le Kit",
+    "hint": "Entrez le code PIN sur votre boîte Kit ou scannez le QR code pour activer votre nouvelle plante.",
+    "pinLabel": "Code PIN 🎁",
+    "pinPlaceholder": "Ex. SPRT1234",
+    "scanBtn": "📷 Scanner le QR code de la boîte",
+    "scanUnsupported": "📷 Scan QR non supporté — saisissez le PIN",
+    "scanning": "Scan en cours... pointez l'appareil photo vers le QR code",
+    "activateBtn": "🌱 Activer la Plante",
+    "activating": "🌱 Activation...",
+    "footer": "Chaque PIN ne peut être utilisé qu'une seule fois · Trouvé dans votre boîte Sprouty",
+    "successMsg": "Votre nouvelle plante a été ajoutée à votre jardin ! 🎉",
+    "successBtn": "Voir Mon Jardin 🌿",
+    "errorFormat": "PIN invalide — doit contenir 6 à 10 caractères alphanumériques.",
+    "errorNotFound": "PIN introuvable. Vérifiez le code sur votre boîte Kit.",
+    "errorUsed": "Ce PIN a déjà été utilisé. Chaque code est à usage unique.",
+    "errorYours": "Vous avez déjà activé ce PIN.",
+    "errorAuth": "Veuillez vous connecter pour activer votre Kit.",
+    "errorDemo": "L'activation du Kit n'est pas disponible en mode démo.",
+    "errorGeneric": "Une erreur s'est produite. Réessayez."
+  },
+  "language": {
+    "select": "Choisir la langue"
+  }
+}

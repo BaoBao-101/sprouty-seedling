@@ -1,0 +1,9 @@
+export const MOCK_MEMORIES = [
+  { id: "m1", leafId: "l1", emoji: "🍅", title: "Planted Tomato Buddy!", date: "Apr 5, 2025", week: 1, img: "🌱", caption: "Today we planted Tomato Buddy together! Mia painted the pot bright orange with yellow suns. It's the most beautiful pot in the world 🌞💚", aiGenerated: true, type: "milestone" },
+  { id: "m2", leafId: "l2", emoji: "🎨", title: "Pot Painting Party", date: "Apr 5, 2025", week: 1, img: "🎨", caption: "Pure chaos, pure joy. Paints everywhere, smile everywhere. The pot has 6 colors on it and we love every single one 🎨🌈", aiGenerated: false, type: "photo" },
+  { id: "m3", leafId: "l3", emoji: "💧", title: "First Big Watering", date: "Apr 8, 2025", week: 1, img: "💧", caption: "Mia gave Tomato Buddy his very first big drink. She was VERY serious about it 💧😄", aiGenerated: true, type: "milestone" },
+  { id: "m4", leafId: "l4", emoji: "🌱", title: "THE SPROUT IS HERE!", date: "Apr 14, 2025", week: 2, img: "✨", caption: "WE HAVE A SPROUT! Mia screamed when she saw it. She ran to tell everyone in the house 🌱🎉", aiGenerated: true, type: "milestone" },
+  { id: "m5", leafId: "l5", emoji: "📷", title: "Best Photo Ever", date: "Apr 17, 2025", week: 2, img: "📸", caption: "Mia insisted on a selfie with her plant. This is now my phone wallpaper forever 📷💝", aiGenerated: false, type: "photo" },
+  { id: "m6", leafId: "l6", emoji: "☀️", title: "Sunny Windowsill Move", date: "Apr 20, 2025", week: 3, img: "☀️", caption: "We moved Tomato Buddy to the sunny windowsill. He stretched his little leaves like morning yoga 🌞🧘", aiGenerated: true, type: "milestone" },
+  { id: "m7", leafId: "l7", emoji: "🎬", title: "Mia's Plant Video Diary", date: "Apr 22, 2025", week: 3, img: "🎬", caption: "Mia made her very first plant video diary. There's singing. It's Oscar-worthy honestly 🎬⭐", aiGenerated: false, type: "video" },
+];
