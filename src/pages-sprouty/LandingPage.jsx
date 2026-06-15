@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Btn } from "../components/ui/Btn";
-import { Card } from "../components/ui/Card";
+import { Btn } from "../components/sprouty-ui/Btn";
+import { Card } from "../components/sprouty-ui/Card";
 import { FloatingLeaf } from "../components/FloatingLeaf";
 
 export function LandingPage({ setPage }) {

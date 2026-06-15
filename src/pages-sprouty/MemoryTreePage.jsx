@@ -4,9 +4,9 @@ import { useAuth } from "../contexts/AuthContext";
 import { useMemories } from "../contexts/MemoryContext";
 import { usePlants } from "../contexts/PlantContext";
 import { useToast } from "../hooks/useToast";
-import { Badge } from "../components/ui/Badge";
-import { Btn } from "../components/ui/Btn";
-import { Modal } from "../components/ui/Modal";
+import { Badge } from "../components/sprouty-ui/Badge";
+import { Btn } from "../components/sprouty-ui/Btn";
+import { Modal } from "../components/sprouty-ui/Modal";
 import { compressImage, validateVideo, getFileCategory } from "../utils/compress";
 
 const LEAF_POSITIONS = [

@@ -6,7 +6,7 @@ import { useFormatVND } from "../hooks/useFormatVND";
 import { useToast } from "../hooks/useToast";
 import { useAuth } from "../contexts/AuthContext";
 import { startCheckout } from "../utils/stripe";
-import { Btn } from "../components/ui/Btn";
+import { Btn } from "../components/sprouty-ui/Btn";
 
 const FIREFLIES = Array.from({ length: 8 }, (_, i) => ({
   left: 15 + ((i * 37 + 11) % 70),

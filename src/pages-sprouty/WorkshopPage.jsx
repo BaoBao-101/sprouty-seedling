@@ -5,9 +5,9 @@ import { useAuth } from "../contexts/AuthContext";
 import { useToast } from "../hooks/useToast";
 import { useFormatVND } from "../hooks/useFormatVND";
 import { startCheckout } from "../utils/stripe";
-import { Btn } from "../components/ui/Btn";
-import { Card } from "../components/ui/Card";
-import { Modal } from "../components/ui/Modal";
+import { Btn } from "../components/sprouty-ui/Btn";
+import { Card } from "../components/sprouty-ui/Card";
+import { Modal } from "../components/sprouty-ui/Modal";
 
 function OrderModal({ isOpen, onClose, initialProduct }) {
   const { t } = useTranslation();

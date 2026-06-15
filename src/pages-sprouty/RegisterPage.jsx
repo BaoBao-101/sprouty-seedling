@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 import { useAuth } from "../contexts/AuthContext";
 import { useToast } from "../hooks/useToast";
 import { useFormatVND } from "../hooks/useFormatVND";
-import { Btn } from "../components/ui/Btn";
-import { Card } from "../components/ui/Card";
+import { Btn } from "../components/sprouty-ui/Btn";
+import { Card } from "../components/sprouty-ui/Card";
 import { KITS, WORKSHOPS } from "../data/products";
 
 function findProduct(id) {

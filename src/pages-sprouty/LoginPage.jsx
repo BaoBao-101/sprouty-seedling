@@ -3,8 +3,8 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../contexts/AuthContext";
 import { useToast } from "../hooks/useToast";
-import { Btn } from "../components/ui/Btn";
-import { Card } from "../components/ui/Card";
+import { Btn } from "../components/sprouty-ui/Btn";
+import { Card } from "../components/sprouty-ui/Card";
 
 function validate(form, t) {
   const errors = {};

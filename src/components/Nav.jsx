@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "../contexts/AuthContext";
-import { Btn } from "./ui/Btn";
+import { Btn } from "./sprouty-ui/Btn";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 const NAV_ITEMS = [

@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { usePlants } from "../contexts/PlantContext";
-import { Modal } from "./ui/Modal";
-import { Btn } from "./ui/Btn";
-import { Badge } from "./ui/Badge";
+import { Modal } from "./sprouty-ui/Modal";
+import { Btn } from "./sprouty-ui/Btn";
+import { Badge } from "./sprouty-ui/Badge";
 
 const RARITY_COLOR = { Common: "green", Rare: "orange", Legendary: "gold" };
 const PIN_REGEX = /^[A-Z0-9]{6,10}$/;

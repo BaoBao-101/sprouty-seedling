@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { MOCK_PLANTS } from "../data/mockPlants";
-import { Badge } from "../components/ui/Badge";
-import { Btn } from "../components/ui/Btn";
-import { Card } from "../components/ui/Card";
-import { Modal } from "../components/ui/Modal";
-import { ProgressBar } from "../components/ui/ProgressBar";
+import { Badge } from "../components/sprouty-ui/Badge";
+import { Btn } from "../components/sprouty-ui/Btn";
+import { Card } from "../components/sprouty-ui/Card";
+import { Modal } from "../components/sprouty-ui/Modal";
+import { ProgressBar } from "../components/sprouty-ui/ProgressBar";
 import { ActivateKitModal } from "../components/ActivateKitModal";
 
 export function PlantsPage() {
