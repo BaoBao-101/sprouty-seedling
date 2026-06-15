@@ -1,22 +1,44 @@
 export function Btn({ children, onClick, variant = "primary", size = "md", className = "", disabled = false, type = "button" }) {
-  const base = "font-bold rounded-2xl transition-all duration-200 active:scale-95 cursor-pointer border-0";
+  const base =
+    "inline-flex items-center justify-center gap-2 font-semibold rounded-full tracking-tight " +
+    "transition-all duration-200 active:scale-[0.97] cursor-pointer border " +
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background " +
+    "disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100 disabled:shadow-none";
+
+  // Variants lean on semantic tokens (sage primary, terracotta accent) with warm shadows.
   const variants = {
-    primary: "bg-green-500 hover:bg-green-600 text-white shadow-lg shadow-green-200",
-    secondary: "bg-white hover:bg-green-50 text-green-600 border-2 border-green-400",
-    orange: "bg-orange-400 hover:bg-orange-500 text-white shadow-lg shadow-orange-200",
-    yellow: "bg-yellow-400 hover:bg-yellow-500 text-yellow-900 shadow-lg shadow-yellow-200",
-    ghost: "bg-transparent hover:bg-gray-100 text-gray-600",
-    gold: "bg-gradient-to-r from-yellow-400 to-amber-400 hover:from-yellow-500 hover:to-amber-500 text-amber-900 shadow-lg shadow-yellow-300",
-    danger: "bg-red-100 hover:bg-red-200 text-red-600",
+    primary:
+      "bg-primary text-primary-foreground border-transparent shadow-[0_10px_24px_-12px_color-mix(in_oklab,var(--primary)_55%,transparent)] hover:bg-primary/90 hover:-translate-y-px",
+    secondary:
+      "bg-card text-primary border-primary/30 hover:border-primary/60 hover:bg-primary/5",
+    orange:
+      "bg-secondary text-secondary-foreground border-transparent shadow-[0_10px_24px_-12px_color-mix(in_oklab,var(--secondary)_55%,transparent)] hover:bg-secondary/90 hover:-translate-y-px",
+    yellow:
+      "bg-yellow-300 text-yellow-900 border-transparent shadow-[0_10px_24px_-12px_color-mix(in_oklab,var(--color-yellow-500)_60%,transparent)] hover:bg-yellow-400",
+    ghost:
+      "bg-transparent text-foreground border-transparent hover:bg-muted",
+    gold:
+      "bg-gradient-to-r from-yellow-300 via-orange-200 to-secondary text-secondary-foreground border-transparent shadow-[0_12px_28px_-12px_color-mix(in_oklab,var(--secondary)_60%,transparent)] hover:opacity-95 hover:-translate-y-px",
+    danger:
+      "bg-destructive/10 text-destructive border-destructive/20 hover:bg-destructive/15",
+    outline:
+      "bg-transparent text-foreground border-border hover:bg-muted",
   };
+
   const sizes = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg",
-    xl: "px-10 py-5 text-xl",
+    sm: "h-9 px-4 text-sm",
+    md: "h-11 px-6 text-[0.95rem]",
+    lg: "h-13 px-7 text-base",
+    xl: "h-14 px-8 text-lg",
   };
+
   return (
-    <button type={type} className={`${base} ${variants[variant]} ${sizes[size]} ${className}`} onClick={onClick} disabled={disabled}>
+    <button
+      type={type}
+      className={`${base} ${variants[variant] ?? variants.primary} ${sizes[size] ?? sizes.md} ${className}`}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {children}
     </button>
   );
