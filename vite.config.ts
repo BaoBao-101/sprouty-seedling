@@ -12,4 +12,11 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  vite: {
+    resolve: {
+      alias: {
+        "react-router-dom": new URL("./src/lib/rrd-compat.tsx", import.meta.url).pathname,
+      },
+    },
+  },
 });
