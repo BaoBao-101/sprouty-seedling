@@ -6,6 +6,7 @@ import { useToast } from "../hooks/useToast";
 import { useFormatVND } from "../hooks/useFormatVND";
 import { Btn } from "../components/sprouty-ui/Btn";
 import { Card } from "../components/sprouty-ui/Card";
+import { Field, Input } from "../components/sprouty-ui/Field";
 import { KITS, WORKSHOPS } from "../data/products";
 
 function findProduct(id) {
@@ -75,92 +76,86 @@ export function RegisterPage() {
     }
   };
 
-  const inputClass = (field) =>
-    `w-full px-4 py-3 rounded-2xl border-2 outline-none text-gray-700 font-medium transition-colors ${
-      errors[field] ? "border-red-400 bg-red-50 focus:border-red-400" : "border-gray-200 focus:border-green-400"
-    }`;
-
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-sky-50 pt-24 px-4 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-b from-background to-accent/40 pt-24 px-4 flex items-center justify-center">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <span className="text-6xl block mb-4" style={{ animation: "float 3s ease-in-out infinite" }}>🌱</span>
-          <h1 className="font-display text-3xl text-gray-800">{t("register.title")}</h1>
-          <p className="text-gray-500 font-medium mt-2">{t("register.subtitle")}</p>
+          <h1 className="font-display text-3xl text-foreground">{t("register.title")}</h1>
+          <p className="text-muted-foreground font-medium mt-2">{t("register.subtitle")}</p>
         </div>
 
         {/* Product pre-selection summary */}
         {(preselected || isVIPPlan) && (
-          <div className="mb-4 bg-green-50 border-2 border-green-200 rounded-2xl p-4 flex items-center gap-3">
+          <div className="mb-4 bg-primary/5 border border-primary/20 rounded-2xl p-4 flex items-center gap-3">
             <span className="text-3xl">{preselected?.emoji ?? "⭐"}</span>
             <div className="flex-1">
-              <p className="text-xs font-bold text-green-600 uppercase tracking-wide mb-0.5">
+              <p className="text-xs font-bold text-primary uppercase tracking-wide mb-0.5">
                 {t("register.preselected")}
               </p>
-              <p className="font-bold text-gray-800">{preselected?.name ?? "VIP Garden"}</p>
-              <p className="text-sm text-gray-500">{formatVND(preselected?.price ?? 20000)}</p>
+              <p className="font-bold text-foreground">{preselected?.name ?? "VIP Garden"}</p>
+              <p className="text-sm text-muted-foreground">{formatVND(preselected?.price ?? 20000)}</p>
             </div>
-            <span className="text-green-500 text-xl font-bold">✓</span>
+            <span className="text-primary text-xl font-bold">✓</span>
           </div>
         )}
 
-        <Card className="p-8">
-          <div className="space-y-4">
-            <div>
-              <label className="text-sm font-bold text-gray-700 block mb-2">{t("register.nameLabel")}</label>
-              <input
-                type="text"
-                placeholder={t("register.namePlaceholder")}
-                value={form.name}
-                onChange={e => update("name", e.target.value)}
-                className={inputClass("name")}
-              />
-              {errors.name && <p className="text-red-500 text-xs mt-1 font-medium">{errors.name}</p>}
+        <Card>
+          <div className="p-8">
+            <div className="space-y-4">
+              <Field label={t("register.nameLabel")} htmlFor="reg-name" error={errors.name}>
+                <Input
+                  id="reg-name"
+                  type="text"
+                  placeholder={t("register.namePlaceholder")}
+                  value={form.name}
+                  onChange={e => update("name", e.target.value)}
+                  error={!!errors.name}
+                />
+              </Field>
+
+              <Field label={t("register.emailLabel")} htmlFor="reg-email" error={errors.email}>
+                <Input
+                  id="reg-email"
+                  type="email"
+                  placeholder="parent@example.com"
+                  value={form.email}
+                  onChange={e => update("email", e.target.value)}
+                  error={!!errors.email}
+                />
+              </Field>
+
+              <Field label={t("register.passwordLabel")} htmlFor="reg-password" error={errors.password}>
+                <Input
+                  id="reg-password"
+                  type="password"
+                  placeholder={t("register.passwordPlaceholder")}
+                  value={form.password}
+                  onChange={e => update("password", e.target.value)}
+                  error={!!errors.password}
+                />
+              </Field>
+
+              {serverError && (
+                <div className="bg-destructive/10 border border-destructive/20 rounded-2xl px-4 py-3 text-destructive text-sm font-medium">
+                  ⚠️ {serverError}
+                </div>
+              )}
+
+              <Btn className="w-full" size="lg" onClick={handleSubmit} disabled={loading}>
+                {loading ? t("register.processing") : t("register.submit")}
+              </Btn>
             </div>
 
-            <div>
-              <label className="text-sm font-bold text-gray-700 block mb-2">{t("register.emailLabel")}</label>
-              <input
-                type="email"
-                placeholder="parent@example.com"
-                value={form.email}
-                onChange={e => update("email", e.target.value)}
-                className={inputClass("email")}
-              />
-              {errors.email && <p className="text-red-500 text-xs mt-1 font-medium">{errors.email}</p>}
+            <div className="text-center mt-6">
+              <Link to="/login" className="text-primary font-bold text-sm hover:text-primary/80">
+                {t("register.switchToLogin")}
+              </Link>
             </div>
 
-            <div>
-              <label className="text-sm font-bold text-gray-700 block mb-2">{t("register.passwordLabel")}</label>
-              <input
-                type="password"
-                placeholder={t("register.passwordPlaceholder")}
-                value={form.password}
-                onChange={e => update("password", e.target.value)}
-                className={inputClass("password")}
-              />
-              {errors.password && <p className="text-red-500 text-xs mt-1 font-medium">{errors.password}</p>}
+            <div className="mt-6 pt-6 border-t border-border/60">
+              <p className="text-xs text-center text-muted-foreground font-medium">{t("register.trust")}</p>
             </div>
-
-            {serverError && (
-              <div className="bg-red-50 border border-red-200 rounded-2xl px-4 py-3 text-red-600 text-sm font-medium">
-                ⚠️ {serverError}
-              </div>
-            )}
-
-            <Btn className="w-full justify-center" size="lg" onClick={handleSubmit} disabled={loading}>
-              {loading ? t("register.processing") : t("register.submit")}
-            </Btn>
-          </div>
-
-          <div className="text-center mt-6">
-            <Link to="/login" className="text-green-600 font-bold text-sm hover:text-green-700">
-              {t("register.switchToLogin")}
-            </Link>
-          </div>
-
-          <div className="mt-6 pt-6 border-t border-gray-100">
-            <p className="text-xs text-center text-gray-400 font-medium">{t("register.trust")}</p>
           </div>
         </Card>
       </div>
