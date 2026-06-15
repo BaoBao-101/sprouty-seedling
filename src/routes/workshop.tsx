@@ -1,6 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useCallback } from "react";
-// @ts-expect-error JSX
+
 import { WorkshopPage } from "../pages-sprouty/WorkshopPage.jsx";
 
 export const Route = createFileRoute("/workshop")({

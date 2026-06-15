@@ -9,27 +9,249 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WorkshopRouteImport } from './routes/workshop'
+import { Route as SuperRouteImport } from './routes/super'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as AuthenticatedRouteImport } from './routes/_authenticated'
+import { Route as SplatRouteImport } from './routes/$'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedTreeRouteImport } from './routes/_authenticated.tree'
+import { Route as AuthenticatedPlantsRouteImport } from './routes/_authenticated.plants'
+import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated.dashboard'
 
-export interface FileRoutesByFullPath {}
-export interface FileRoutesByTo {}
+const WorkshopRoute = WorkshopRouteImport.update({
+  id: '/workshop',
+  path: '/workshop',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SuperRoute = SuperRouteImport.update({
+  id: '/super',
+  path: '/super',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedRoute = AuthenticatedRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedTreeRoute = AuthenticatedTreeRouteImport.update({
+  id: '/tree',
+  path: '/tree',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedPlantsRoute = AuthenticatedPlantsRouteImport.update({
+  id: '/plants',
+  path: '/plants',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => AuthenticatedRoute,
+} as any)
+
+export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/super': typeof SuperRoute
+  '/workshop': typeof WorkshopRoute
+  '/dashboard': typeof AuthenticatedDashboardRoute
+  '/plants': typeof AuthenticatedPlantsRoute
+  '/tree': typeof AuthenticatedTreeRoute
+}
+export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/super': typeof SuperRoute
+  '/workshop': typeof WorkshopRoute
+  '/dashboard': typeof AuthenticatedDashboardRoute
+  '/plants': typeof AuthenticatedPlantsRoute
+  '/tree': typeof AuthenticatedTreeRoute
+}
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/$': typeof SplatRoute
+  '/_authenticated': typeof AuthenticatedRouteWithChildren
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/super': typeof SuperRoute
+  '/workshop': typeof WorkshopRoute
+  '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
+  '/_authenticated/plants': typeof AuthenticatedPlantsRoute
+  '/_authenticated/tree': typeof AuthenticatedTreeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: never
+  fullPaths:
+    | '/'
+    | '/$'
+    | '/login'
+    | '/register'
+    | '/super'
+    | '/workshop'
+    | '/dashboard'
+    | '/plants'
+    | '/tree'
   fileRoutesByTo: FileRoutesByTo
-  to: never
-  id: '__root__'
+  to:
+    | '/'
+    | '/$'
+    | '/login'
+    | '/register'
+    | '/super'
+    | '/workshop'
+    | '/dashboard'
+    | '/plants'
+    | '/tree'
+  id:
+    | '__root__'
+    | '/'
+    | '/$'
+    | '/_authenticated'
+    | '/login'
+    | '/register'
+    | '/super'
+    | '/workshop'
+    | '/_authenticated/dashboard'
+    | '/_authenticated/plants'
+    | '/_authenticated/tree'
   fileRoutesById: FileRoutesById
 }
-export interface RootRouteChildren {}
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {}
+export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
+  SplatRoute: typeof SplatRoute
+  AuthenticatedRoute: typeof AuthenticatedRouteWithChildren
+  LoginRoute: typeof LoginRoute
+  RegisterRoute: typeof RegisterRoute
+  SuperRoute: typeof SuperRoute
+  WorkshopRoute: typeof WorkshopRoute
 }
 
-const rootRouteChildren: RootRouteChildren = {}
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/workshop': {
+      id: '/workshop'
+      path: '/workshop'
+      fullPath: '/workshop'
+      preLoaderRoute: typeof WorkshopRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/super': {
+      id: '/super'
+      path: '/super'
+      fullPath: '/super'
+      preLoaderRoute: typeof SuperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/tree': {
+      id: '/_authenticated/tree'
+      path: '/tree'
+      fullPath: '/tree'
+      preLoaderRoute: typeof AuthenticatedTreeRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/plants': {
+      id: '/_authenticated/plants'
+      path: '/plants'
+      fullPath: '/plants'
+      preLoaderRoute: typeof AuthenticatedPlantsRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+    '/_authenticated/dashboard': {
+      id: '/_authenticated/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AuthenticatedDashboardRouteImport
+      parentRoute: typeof AuthenticatedRoute
+    }
+  }
+}
+
+interface AuthenticatedRouteChildren {
+  AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
+  AuthenticatedPlantsRoute: typeof AuthenticatedPlantsRoute
+  AuthenticatedTreeRoute: typeof AuthenticatedTreeRoute
+}
+
+const AuthenticatedRouteChildren: AuthenticatedRouteChildren = {
+  AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
+  AuthenticatedPlantsRoute: AuthenticatedPlantsRoute,
+  AuthenticatedTreeRoute: AuthenticatedTreeRoute,
+}
+
+const AuthenticatedRouteWithChildren = AuthenticatedRoute._addFileChildren(
+  AuthenticatedRouteChildren,
+)
+
+const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  SplatRoute: SplatRoute,
+  AuthenticatedRoute: AuthenticatedRouteWithChildren,
+  LoginRoute: LoginRoute,
+  RegisterRoute: RegisterRoute,
+  SuperRoute: SuperRoute,
+  WorkshopRoute: WorkshopRoute,
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()

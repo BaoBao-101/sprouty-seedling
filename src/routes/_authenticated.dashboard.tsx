@@ -1,8 +1,8 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useCallback } from "react";
-// @ts-expect-error JSX
+
 import { DashboardPage } from "../pages-sprouty/DashboardPage.jsx";
-// @ts-expect-error JSX
+
 import { useAuth } from "../contexts/AuthContext.jsx";
 
 export const Route = createFileRoute("/_authenticated/dashboard")({

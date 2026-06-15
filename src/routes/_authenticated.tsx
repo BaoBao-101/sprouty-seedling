@@ -1,6 +1,6 @@
 import { createFileRoute, Outlet, useNavigate } from "@tanstack/react-router";
 import { useEffect } from "react";
-// @ts-expect-error JSX
+
 import { useAuth } from "../contexts/AuthContext.jsx";
 
 export const Route = createFileRoute("/_authenticated")({
