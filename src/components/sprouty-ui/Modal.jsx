@@ -48,16 +48,20 @@ export function Modal({ isOpen, onClose, children, title }) {
       aria-labelledby="modal-title"
       onClick={e => e.target === e.currentTarget && onClose()}
     >
-      <div className="absolute inset-0 bg-green-900/60 backdrop-blur-sm" onClick={onClose} aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-[color-mix(in_oklab,var(--secondary)_35%,#1a0f08_65%)]/70 backdrop-blur-sm"
+        onClick={onClose}
+        aria-hidden="true"
+      />
       <div
         ref={dialogRef}
-        className="relative bg-white rounded-3xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto animate-[slideUp_0.3s_ease-out]"
+        className="relative bg-card text-card-foreground rounded-3xl border border-border/60 shadow-[0_30px_60px_-30px_color-mix(in_oklab,var(--secondary)_55%,transparent)] w-full max-w-md max-h-[90vh] overflow-y-auto animate-[slideUp_0.3s_ease-out]"
       >
-        <div className="flex items-center justify-between p-6 border-b border-gray-100">
-          <h3 id="modal-title" className="font-display text-xl text-gray-800">{title}</h3>
+        <div className="flex items-center justify-between px-6 py-5 border-b border-border/60">
+          <h3 id="modal-title" className="font-display text-xl text-foreground">{title}</h3>
           <button
             onClick={onClose}
-            className="w-9 h-9 flex items-center justify-center rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 transition-colors text-lg"
+            className="w-9 h-9 flex items-center justify-center rounded-full bg-muted hover:bg-muted/70 text-muted-foreground hover:text-foreground transition-colors"
             aria-label="Close"
           >
             ✕

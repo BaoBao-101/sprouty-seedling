@@ -1,14 +1,17 @@
-export function Badge({ children, color = "green" }) {
+export function Badge({ children, color = "green", className = "" }) {
   const colors = {
-    green: "bg-green-100 text-green-700",
-    orange: "bg-orange-100 text-orange-700",
-    yellow: "bg-yellow-100 text-yellow-800",
-    purple: "bg-purple-100 text-purple-700",
-    red: "bg-red-100 text-red-700",
-    gold: "bg-amber-100 text-amber-800",
+    green: "bg-primary/10 text-primary ring-primary/20",
+    orange: "bg-secondary/10 text-secondary ring-secondary/20",
+    yellow: "bg-yellow-200/60 text-yellow-900 ring-yellow-300/60",
+    purple: "bg-accent text-accent-foreground ring-accent/60",
+    red: "bg-destructive/10 text-destructive ring-destructive/20",
+    gold: "bg-gradient-to-r from-yellow-200 to-orange-200 text-secondary ring-secondary/20",
+    neutral: "bg-muted text-muted-foreground ring-border",
   };
   return (
-    <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold ${colors[color]}`}>
+    <span
+      className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[0.7rem] font-semibold uppercase tracking-wide ring-1 ring-inset ${colors[color] ?? colors.green} ${className}`}
+    >
       {children}
     </span>
   );
