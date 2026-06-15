@@ -1,0 +1,295 @@
+{
+  "nav": {
+    "home": "Home",
+    "myGarden": "My Garden",
+    "memoryTree": "Memory Tree",
+    "plantBuddies": "Plant Buddies",
+    "workshop": "Workshop",
+    "vip": "VIP ✨",
+    "signIn": "Sign In",
+    "register": "Register",
+    "signOut": "Sign Out",
+    "aria": {
+      "main": "Main navigation",
+      "home": "Sprouty home",
+      "userGarden": "{{name}}'s garden",
+      "signOut": "Sign out",
+      "openMenu": "Open navigation menu",
+      "closeMenu": "Close navigation menu"
+    }
+  },
+  "landing": {
+    "hero": {
+      "badge": "🌍 Nature-Powered Memories for Families",
+      "title": { "grow": "Grow", "memories": "Memories", "together": "Together" },
+      "subtitle": "Plant real seeds, paint your pot, and watch memories bloom — your child's very own magical growing world.",
+      "ctaTree": "🌳 See the Memory Tree",
+      "ctaKit": "🎨 Get Your Kit"
+    },
+    "stats": {
+      "families": "Families 🌱",
+      "memories": "Memories 📸",
+      "rating": "Rating"
+    },
+    "ai": {
+      "title": "AI Plant Buddy Message",
+      "subtitle": "Try a magical message from your plant!",
+      "badge": "✨ AI",
+      "thinking": "Thinking of something magical...",
+      "placeholder": "Press the button below ✨",
+      "generating": "✨ Generating...",
+      "generate": "✨ Generate AI Message",
+      "messages": [
+        "Tomato Buddy grew a new leaf today 🍅🌱 Keep watering!",
+        "You and your buddy are growing together! 💚",
+        "Little Mia is becoming a master gardener! 🌟",
+        "Your plant buddy misses you today 🥺🌿 Time to water!",
+        "3 weeks together already! Your tree has 7 magical memories! 🌳"
+      ]
+    },
+    "features": {
+      "badge": "🌿 Everything in One Magical World",
+      "heading": "What Makes Sprouty Special",
+      "items": {
+        "tree":   { "title": "Digital Memory Tree", "desc": "Each leaf holds a photo, video or journal entry. Watch your tree grow as your child grows." },
+        "pot":    { "title": "Paint Your Pot", "desc": "Decorate a real terracotta pot with acrylic paints. Every pot is a one-of-a-kind masterpiece." },
+        "ai":     { "title": "AI Story Magic", "desc": "AI creates cute captions and monthly story recaps so every memory has its own fairy tale." },
+        "buddy":  { "title": "Plant Buddy Collection", "desc": "Collect rare plant buddies with personalities, stages and special powers to unlock." },
+        "vip":    { "title": "VIP Golden Garden", "desc": "Unlock nighttime mode, seasonal effects and the legendary golden memory tree." },
+        "family": { "title": "Family Memories", "desc": "Share milestones with grandparents. Print your tree as a keepsake photo book." }
+      }
+    },
+    "cta": {
+      "heading": "Every little sprout has a story. 🌱",
+      "subtitle": "Start yours today. Your memory tree is waiting to bloom.",
+      "start": "🌳 Start Free Today",
+      "gift": "🎁 Gift a Kit"
+    }
+  },
+  "login": {
+    "titleLogin": "Welcome back!",
+    "titleRegister": "Join Sprouty!",
+    "subtitleLogin": "Your Memory Tree is waiting 🌳",
+    "subtitleRegister": "Start your magical growing journey 🌱",
+    "nameLabel": "Child's name 👶",
+    "namePlaceholder": "E.g. Mia, Tom, Lily...",
+    "emailLabel": "Parent email 📧",
+    "passwordLabel": "Password 🔒",
+    "passwordPlaceholder": "At least 6 characters",
+    "processing": "🌱 Processing...",
+    "submitLogin": "🌳 Enter My Garden",
+    "submitRegister": "🌱 Plant My First Memory",
+    "switchToRegister": "No account yet? Register now →",
+    "switchToLogin": "Already have an account? Sign in →",
+    "trust": "🔒 Child-safe · No ads · Family privacy",
+    "demo": "→ Try without signing up",
+    "errors": {
+      "name": "Please enter a name",
+      "email": "Invalid email address",
+      "password": "Password must be at least 6 characters",
+      "server": "Wrong email or password. Please try again!"
+    },
+    "toast": { "welcome": "Welcome back to Sprouty! 🌱" }
+  },
+  "register": {
+    "title": "Join Sprouty!",
+    "subtitle": "Start your magical growing journey 🌱",
+    "nameLabel": "Child's name 👶",
+    "namePlaceholder": "E.g. Mia, Tom, Lily...",
+    "emailLabel": "Parent email 📧",
+    "passwordLabel": "Password 🔒",
+    "passwordPlaceholder": "At least 6 characters",
+    "processing": "🌱 Processing...",
+    "submit": "🌱 Plant My First Memory",
+    "preselected": "Selected product",
+    "switchToLogin": "Already have an account? Sign in →",
+    "trust": "🔒 Child-safe · No ads · Family privacy",
+    "errors": {
+      "name": "Please enter a name",
+      "email": "Invalid email address",
+      "password": "Password must be at least 6 characters",
+      "server": "Something went wrong. Please try again!"
+    },
+    "toast": {
+      "welcome": "Welcome to Sprouty! 🌱",
+      "withProduct": "Welcome! {{name}} order noted — we'll contact you within 24h 🌱",
+      "withVIP": "Welcome VIP! We'll reach out to activate your VIP plan 🌟"
+    }
+  },
+  "dashboard": {
+    "greeting": "Good morning, {{name}}! 🌞",
+    "subtitle": "Your garden is looking magical today 🌿",
+    "paymentSuccess": "Payment successful! Your account has been updated 🎉",
+    "notif": {
+      "from": "From: Tomato Buddy",
+      "msg": "Hey {{name}}! You and I are growing together 🌱 Thank you for watering me today. I love you to the moon! 🌙"
+    },
+    "plant": {
+      "day": "Day {{n}} of growing together",
+      "progress": "Growth Progress",
+      "sprouted": "🌱 Sprouted",
+      "ready": "🍅 Ready!",
+      "water": "Water",
+      "waterVal": "Last: today",
+      "sun": "Sunlight",
+      "sunVal": "Needs more",
+      "growth": "Growth",
+      "growthVal": "+2cm this week"
+    },
+    "tree": {
+      "title": "🌳 Memory Tree",
+      "subtitle": "7 memories saved · Tap to explore",
+      "open": "Open Tree 🌳"
+    },
+    "actions": {
+      "addMemory": "Add Memory",
+      "myPlants": "My Plants",
+      "workshop": "Workshop",
+      "vipGarden": "VIP Garden",
+      "activateKit": "Activate Kit"
+    },
+    "memories": {
+      "title": "Recent Memories ✨",
+      "seeAll": "See all →",
+      "aiCaption": "✨ AI Caption"
+    }
+  },
+  "vip": {
+    "badge": "🌟 VIP Experience",
+    "title": "The Golden Garden ✨",
+    "subtitle": "Unlock the magical nighttime world. Rare plants, golden trees, and seasonal wonders.",
+    "dayMode": "☀️ Day Mode",
+    "nightMode": "🌙 Preview Night Mode",
+    "plans": {
+      "monthly": { "name": "VIP Monthly", "period": "/month", "btn": "Start VIP" },
+      "annual":  { "name": "VIP Annual",  "period": "/year", "save": "Save 25%", "btn": "✨ Subscribe Annually" }
+    },
+    "footer": "🔒 Cancel anytime · Family-safe · No ads",
+    "stripeLoading": "Redirecting to Stripe...",
+    "stripeError": "Could not connect to payment. Please try again.",
+    "stripeUnavailable": "Payment not available in demo mode."
+  },
+  "tree": {
+    "badge": "🌳 Core Feature",
+    "memoriesCount": "Every leaf holds a magical memory · {{count}} memories saved",
+    "leafProgress": "{{count}}/{{max}} memories · Tap a leaf to view ✨",
+    "tapLeaf": "Tap",
+    "addMemory": "🌿 Plant a New Memory",
+    "timeline": {
+      "title": "📅 Timeline",
+      "empty": "No memories yet — plant your first leaf! 🌱",
+      "week": "Week {{n}}",
+      "ai": "✨ AI"
+    },
+    "upload": {
+      "photo": "Photo", "video": "Video", "journal": "Journal",
+      "dropJournal": "Write your journal entry below",
+      "dropFile": "Click to upload or drag here",
+      "fileHint": "JPG, PNG · Auto-compressed → WebP ≤300 KB · MP4 ≤2 MB",
+      "compressing": "🌀 Compressing image...",
+      "compressed": "✅ Compressed: {{size}} KB (WebP)",
+      "videoReady": "✅ Video OK · {{size}} MB",
+      "videoTooBig": "⚠️ Video too large ({{size}} MB) · Max 2 MB",
+      "compressError": "Could not compress image. Please try another file.",
+      "unsupportedFile": "Unsupported file format",
+      "clickToChange": "Click to choose a different file",
+      "clickToRetry": "Click to try again",
+      "titleLabel": "Memory title 🌟",
+      "captionLabel": "Describe the moment ✍️",
+      "aiBtn": "✨ AI Caption", "aiLoading": "🌀 Generating...",
+      "captionPlaceholder": "Tell the story... or let AI write it for you ✨",
+      "save": "🌿 Save to My Tree", "saving": "🌱 Saving...",
+      "toast": "Memory saved to your Memory Tree! 🌿",
+      "uploadError": "Upload failed. Please try again 😢",
+      "defaultTitle": "Memory #{{n}}", "defaultCaption": "A wonderful moment 💚"
+    },
+    "detail": {
+      "aiCaption": "✨ AI Caption",
+      "like": "💚 Love this moment!",
+      "share": "📤 Share"
+    }
+  },
+  "plants": {
+    "badge": "🌿 Collect Them All",
+    "title": "Plant Buddies",
+    "subtitle": "Each buddy has a personality, stages to unlock, and memories to grow together.",
+    "day": "Day {{n}}",
+    "growthStages": "Growth Stages",
+    "fullyGrown": "🎉 Fully Grown! Legendary!",
+    "stageProgress": "Stage {{current}} of {{max}} · Keep going!",
+    "modal": {
+      "growthJourney": "Growth Journey",
+      "stage": "S{{n}}",
+      "addMemory": "📸 Add a Memory"
+    }
+  },
+  "workshop": {
+    "badge": "🎨 Craft Kits & Workshops",
+    "title": "Sprouty Workshop",
+    "subtitle": "Everything your child needs to paint, grow, and flourish — in one magical box.",
+    "upcomingTitle": "🗓️ Upcoming Workshops",
+    "spotsLeft": "{{n}} spots left",
+    "pricingTitle": "💰 Choose Your Plan",
+    "popular": "⭐ Most Popular",
+    "register": "Register →",
+    "orderBtn": "🛒 Order {{name}}",
+    "howItWorks": [
+      { "icon": "🎨", "title": "Paint Your Pot",       "desc": "Use acrylic paints to decorate your pot any way you like. Your pot, your art — no two pots alike!" },
+      { "icon": "🌱", "title": "Choose a Plant Buddy", "desc": "Pick your favourite buddy — tomato, chilli, beans or corn. Each one has its own personality!" },
+      { "icon": "💧", "title": "Grow Together",        "desc": "Water daily and watch your plant grow. Each milestone adds a new leaf to your digital Memory Tree!" },
+      { "icon": "📸", "title": "Capture Memories",    "desc": "Take photos, record videos, write journal entries. Your digital tree blooms with every memory!" }
+    ],
+    "order": {
+      "title": "🛒 Place Order",
+      "product": "Product 🛍️",
+      "nameLabel": "Parent / child name 👶", "namePlaceholder": "E.g. Sarah, Tom...",
+      "emailLabel": "Contact email 📧",
+      "noteLabel": "Additional notes 📝", "noteOptional": "(optional)",
+      "notePlaceholder": "Delivery address, special requests...",
+      "submit": "🛒 Order · {{price}}",
+      "noPayment": "No payment now · We'll contact you to confirm",
+      "errors": { "name": "Please enter a name", "email": "Invalid email address" },
+      "stripeBtn": "💳 Pay with Stripe",
+      "stripeLoading": "Redirecting to Stripe...",
+      "stripeError": "Could not connect to payment. Please try again.",
+      "stripeUnavailable": "Payment not available in demo mode.",
+      "stripeNote": "🔒 Secured by Stripe · Cancel anytime"
+    }
+  },
+  "chat": {
+    "modes": { "sales": "🛒 Product Advisor", "care": "🌿 Plant Care Assistant", "stem": "🔧 STEM Mentor" },
+    "placeholder": "Message...",
+    "aria": { "close": "Close chat", "open": "Open chat", "send": "Send message" },
+    "kitCard": { "view": "View details →" },
+    "workshopCard": { "register": "Register now →" },
+    "upsellCard": {
+      "title": "STEM Mentor", "subtitle": "Advanced plan only",
+      "desc": "Upgrade to ESP32 Advanced Kit to unlock Arduino C++, Firebase, and in-depth IoT guidance! 🚀",
+      "btn": "Upgrade now ✨"
+    }
+  },
+  "activate": {
+    "title": "Activate Kit",
+    "hint": "Enter the PIN printed on your Kit box or scan the QR code to activate your new plant buddy.",
+    "pinLabel": "PIN Code 🎁",
+    "pinPlaceholder": "E.g. SPRT1234",
+    "scanBtn": "📷 Scan QR Code from Kit box",
+    "scanUnsupported": "📷 QR scanning not supported — please type the PIN",
+    "scanning": "Scanning... point camera at the QR code",
+    "activateBtn": "🌱 Activate Plant",
+    "activating": "🌱 Activating...",
+    "footer": "Each PIN can only be used once · Found inside your Sprouty Kit box",
+    "successMsg": "Your new plant buddy has been added to your garden! 🎉",
+    "successBtn": "View My Garden 🌿",
+    "errorFormat": "Invalid PIN — must be 6–10 alphanumeric characters.",
+    "errorNotFound": "PIN not found. Double-check the code on your Kit box.",
+    "errorUsed": "This PIN has already been used. Each code is single-use.",
+    "errorYours": "You've already activated this PIN.",
+    "errorAuth": "Please sign in to activate your Kit.",
+    "errorDemo": "Kit activation is not available in demo mode.",
+    "errorGeneric": "Something went wrong. Please try again."
+  },
+  "language": {
+    "select": "Choose language"
+  }
+}
