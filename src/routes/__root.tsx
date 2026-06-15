@@ -13,19 +13,19 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import "../styles/animations.css";
 import "../i18n/index.js";
-// @ts-expect-error - JSX modules
+
 import { AuthProvider } from "../contexts/AuthContext.jsx";
-// @ts-expect-error - JSX modules
+
 import { PlantProvider } from "../contexts/PlantContext.jsx";
-// @ts-expect-error - JSX modules
+
 import { MemoryProvider } from "../contexts/MemoryContext.jsx";
-// @ts-expect-error - JSX modules
+
 import { ToastProvider } from "../components/sprouty-ui/Toast.jsx";
-// @ts-expect-error - JSX modules
+
 import { ErrorBoundary as SproutyErrorBoundary } from "../components/ErrorBoundary.jsx";
-// @ts-expect-error - JSX modules
+
 import { Nav } from "../components/Nav.jsx";
-// @ts-expect-error - JSX modules
+
 import { ChatWidget } from "../components/ChatWidget.jsx";
 
 function NotFoundComponent() {
