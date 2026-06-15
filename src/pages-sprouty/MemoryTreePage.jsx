@@ -7,6 +7,7 @@ import { useToast } from "../hooks/useToast";
 import { Badge } from "../components/sprouty-ui/Badge";
 import { Btn } from "../components/sprouty-ui/Btn";
 import { Modal } from "../components/sprouty-ui/Modal";
+import { Field, Input, Textarea } from "../components/sprouty-ui/Field";
 import { compressImage, validateVideo, getFileCategory } from "../utils/compress";
 
 const LEAF_POSITIONS = [
@@ -214,31 +215,32 @@ function UploadModal({ isOpen, onClose }) {
         )}
 
         {/* Title */}
-        <div>
-          <label className="text-sm font-bold text-gray-700 block mb-2">{t("tree.upload.titleLabel")}</label>
-          <input
+        <Field label={t("tree.upload.titleLabel")} htmlFor="mem-title">
+          <Input
+            id="mem-title"
             type="text"
             placeholder={`VD: Ngày đầu tiên tưới cây, Chụp ảnh với ${form.type === "photo" ? "cây nhỏ" : "buddy"}...`}
             value={form.title}
             onChange={e => setForm(f => ({ ...f, title: e.target.value }))}
-            className="w-full px-4 py-3 rounded-2xl border-2 border-gray-200 focus:border-green-400 outline-none text-gray-700 font-medium text-sm transition-colors"
           />
-        </div>
+        </Field>
 
         {/* Caption + AI button */}
         <div>
-          <div className="flex items-center justify-between mb-2">
-            <label className="text-sm font-bold text-gray-700">{t("tree.upload.captionLabel")}</label>
+          <div className="flex items-center justify-between mb-1.5">
+            <label htmlFor="mem-caption" className="block text-sm font-semibold text-foreground/80">
+              {t("tree.upload.captionLabel")}
+            </label>
             <button type="button" onClick={handleAICaption} disabled={aiLoading}
-              className="text-xs bg-yellow-100 text-yellow-700 px-3 py-1.5 rounded-full font-bold hover:bg-yellow-200 disabled:opacity-60 cursor-pointer border-0 flex items-center gap-1 transition-colors">
+              className="text-xs bg-yellow-200/60 text-yellow-900 px-3 py-1.5 rounded-full font-bold hover:bg-yellow-300/70 disabled:opacity-60 cursor-pointer border-0 flex items-center gap-1 transition-colors">
               {aiLoading ? t("tree.upload.aiLoading") : t("tree.upload.aiBtn")}
             </button>
           </div>
-          <textarea
+          <Textarea
+            id="mem-caption"
             value={form.caption}
             onChange={e => { setForm(f => ({ ...f, caption: e.target.value })); setAiCaption(""); }}
             placeholder={t("tree.upload.captionPlaceholder")}
-            className="w-full px-4 py-3 rounded-2xl border-2 border-gray-200 focus:border-green-400 outline-none text-gray-700 font-medium text-sm resize-none transition-colors"
             rows={3}
           />
         </div>
@@ -251,7 +253,7 @@ function UploadModal({ isOpen, onClose }) {
           </div>
         )}
 
-        <Btn className="w-full justify-center" size="lg" onClick={handleSave} disabled={saving || fileState?.status === "compressing" || fileState?.status === "error"}>
+        <Btn className="w-full" size="lg" onClick={handleSave} disabled={saving || fileState?.status === "compressing" || fileState?.status === "error"}>
           {saving ? t("tree.upload.saving") : t("tree.upload.save")}
         </Btn>
       </div>

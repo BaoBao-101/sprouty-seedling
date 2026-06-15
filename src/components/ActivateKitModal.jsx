@@ -4,6 +4,7 @@ import { usePlants } from "../contexts/PlantContext";
 import { Modal } from "./sprouty-ui/Modal";
 import { Btn } from "./sprouty-ui/Btn";
 import { Badge } from "./sprouty-ui/Badge";
+import { Field, Input } from "./sprouty-ui/Field";
 
 const RARITY_COLOR = { Common: "green", Rare: "orange", Legendary: "gold" };
 const PIN_REGEX = /^[A-Z0-9]{6,10}$/;
@@ -162,25 +163,21 @@ export function ActivateKitModal({ isOpen, onClose }) {
           )}
 
           {/* PIN input */}
-          <div>
-            <label className="text-sm font-bold text-gray-700 block mb-2">
-              {t("activate.pinLabel")}
-            </label>
-            <input
+          <Field label={t("activate.pinLabel")} htmlFor="activate-pin" error={error}>
+            <Input
+              id="activate-pin"
               type="text"
               value={pin}
               onChange={e => { setPin(normalizePin(e.target.value)); setError(null); }}
               onKeyDown={e => e.key === "Enter" && !loading && handleSubmit()}
               placeholder={t("activate.pinPlaceholder")}
               maxLength={10}
-              className={`w-full px-4 py-3 rounded-2xl border-2 outline-none font-mono text-lg tracking-widest font-bold text-center transition-colors ${
-                error ? "border-red-400 bg-red-50" : "border-gray-200 focus:border-green-400"
-              }`}
+              error={!!error}
+              className="font-mono text-lg tracking-widest font-bold text-center"
             />
-            {error && <p className="text-red-500 text-xs mt-1 font-medium">{error}</p>}
-          </div>
+          </Field>
 
-          <Btn variant="primary" className="w-full justify-center" size="lg"
+          <Btn variant="primary" className="w-full" size="lg"
             onClick={handleSubmit} disabled={loading || pin.length < 6}>
             {loading ? t("activate.activating") : t("activate.activateBtn")}
           </Btn>
