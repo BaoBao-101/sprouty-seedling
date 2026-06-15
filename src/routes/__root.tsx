@@ -11,6 +11,22 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import "../styles/animations.css";
+import "../i18n/index.js";
+// @ts-expect-error - JSX modules
+import { AuthProvider } from "../contexts/AuthContext.jsx";
+// @ts-expect-error - JSX modules
+import { PlantProvider } from "../contexts/PlantContext.jsx";
+// @ts-expect-error - JSX modules
+import { MemoryProvider } from "../contexts/MemoryContext.jsx";
+// @ts-expect-error - JSX modules
+import { ToastProvider } from "../components/sprouty-ui/Toast.jsx";
+// @ts-expect-error - JSX modules
+import { ErrorBoundary as SproutyErrorBoundary } from "../components/ErrorBoundary.jsx";
+// @ts-expect-error - JSX modules
+import { Nav } from "../components/Nav.jsx";
+// @ts-expect-error - JSX modules
+import { ChatWidget } from "../components/ChatWidget.jsx";
 
 function NotFoundComponent() {
   return (
@@ -77,19 +93,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Sprouty 🌱 — Grow Memories Together" },
+      { name: "description", content: "Sprouty — plant seeds, grow your memory tree together with your family." },
+      { property: "og:title", content: "Sprouty 🌱 — Grow Memories Together" },
+      { property: "og:description", content: "Plant seeds, grow your memory tree together." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap",
       },
     ],
   }),
@@ -118,8 +136,24 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <SproutyErrorBoundary>
+        <AuthProvider>
+          <PlantProvider>
+            <MemoryProvider>
+              <ToastProvider>
+                <div className="font-sans">
+                  <Nav />
+                  <ChatWidget />
+                  <div style={{ minHeight: "100vh" }}>
+                    {/* Required: nested routes render here. */}
+                    <Outlet />
+                  </div>
+                </div>
+              </ToastProvider>
+            </MemoryProvider>
+          </PlantProvider>
+        </AuthProvider>
+      </SproutyErrorBoundary>
     </QueryClientProvider>
   );
 }
