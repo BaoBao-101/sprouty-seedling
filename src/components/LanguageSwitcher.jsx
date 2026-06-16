@@ -29,19 +29,19 @@ export function LanguageSwitcher() {
     <div className="relative" ref={ref}>
       <button
         onClick={() => setOpen((o) => !o)}
-        className="flex items-center gap-1.5 px-2.5 py-2 rounded-2xl text-sm font-bold text-gray-600 hover:bg-gray-50 transition-colors cursor-pointer border-0 bg-transparent"
+        className="flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-semibold text-foreground/80 hover:bg-muted hover:text-foreground transition-colors cursor-pointer border border-transparent hover:border-border/60 bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
         aria-label={t("language.select")}
         aria-haspopup="listbox"
         aria-expanded={open}
       >
         <span aria-hidden="true">{current.flag}</span>
         <span className="hidden sm:block">{current.label}</span>
-        <span aria-hidden="true" className="text-xs text-gray-400">▾</span>
+        <span aria-hidden="true" className="text-xs text-muted-foreground">▾</span>
       </button>
 
       {open && (
         <ul
-          className="absolute right-0 mt-2 w-44 bg-white rounded-2xl shadow-2xl border border-gray-100 py-1.5 z-50"
+          className="absolute right-0 mt-2 w-48 bg-card text-foreground rounded-2xl border border-border/60 py-1.5 z-50 shadow-[0_20px_50px_-20px_color-mix(in_oklab,var(--secondary)_45%,transparent)]"
           role="listbox"
           aria-label={t("language.select")}
         >
@@ -49,10 +49,10 @@ export function LanguageSwitcher() {
             <li key={lang.code} role="option" aria-selected={lang.code === current.code}>
               <button
                 onClick={() => pick(lang.code)}
-                className={`flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm font-bold cursor-pointer border-0 transition-colors ${
+                className={`flex items-center gap-3 w-full text-left px-4 py-2.5 text-sm font-semibold cursor-pointer border-0 transition-colors ${
                   lang.code === current.code
-                    ? "bg-green-50 text-green-700"
-                    : "text-gray-600 hover:bg-gray-50 bg-transparent"
+                    ? "bg-primary/10 text-primary"
+                    : "text-foreground/80 hover:bg-muted bg-transparent"
                 }`}
               >
                 <span aria-hidden="true">{lang.flag}</span> {lang.label}
