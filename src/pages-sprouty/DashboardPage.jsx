@@ -85,7 +85,7 @@ export function DashboardPage({ user, setPage }) {
                 <div className="font-display text-2xl text-foreground">🍅 Tomato Buddy</div>
                 <div className="text-muted-foreground font-medium text-sm">{t("dashboard.plant.day", { n: activePlant.daysGrowing })}</div>
               </div>
-              <Badge variant="secondary">Stage {activePlant.stage}/{activePlant.maxStage}</Badge>
+              <Badge color="orange">Stage {activePlant.stage}/{activePlant.maxStage}</Badge>
             </div>
 
             <div className="flex items-center gap-6 mb-6">
@@ -130,7 +130,7 @@ export function DashboardPage({ user, setPage }) {
                 <div className="font-display text-lg text-foreground">{t("dashboard.tree.title")}</div>
                 <div className="text-xs text-muted-foreground font-medium">{t("dashboard.tree.subtitle")}</div>
               </div>
-              <Badge variant="primary">{MOCK_MEMORIES.length} ✦</Badge>
+              <Badge color="green">{MOCK_MEMORIES.length} ✦</Badge>
             </div>
             <div className="flex justify-center my-2 transition-transform duration-300 group-hover:scale-105">
               <svg viewBox="0 0 160 180" className="w-32 h-40 drop-shadow-[0_8px_16px_color-mix(in_oklab,var(--primary)_25%,transparent)]">
@@ -195,7 +195,7 @@ export function DashboardPage({ user, setPage }) {
                   <span className="relative">{m.img}</span>
                 </div>
                 <p className="text-xs text-muted-foreground line-clamp-2 font-medium">{m.caption}</p>
-                {m.aiGenerated && <div className="mt-2"><Badge variant="warning">{t("dashboard.memories.aiCaption")}</Badge></div>}
+                {m.aiGenerated && <div className="mt-2"><Badge color="yellow">{t("dashboard.memories.aiCaption")}</Badge></div>}
               </Card>
             ))}
           </div>
