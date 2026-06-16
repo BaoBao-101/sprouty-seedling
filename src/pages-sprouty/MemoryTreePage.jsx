@@ -308,25 +308,64 @@ export function MemoryTreePage() {
   const progressWidth = Math.min((memories.length / LEAF_POSITIONS.length) * 290, 290);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-900 via-green-800 to-teal-900 pt-20 pb-16 px-4">
-      <div className="max-w-5xl mx-auto">
+    <div className="relative min-h-screen overflow-hidden pt-20 pb-16 px-4 bg-[oklch(0.270_0.045_148)] text-white">
+      {/* Ambient backdrop — warm sunset filtering through canopy */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.345_0.060_146)] via-[oklch(0.290_0.050_150)] to-[oklch(0.230_0.040_155)]" />
+        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[42rem] h-[42rem] rounded-full bg-secondary/20 blur-3xl" />
+        <div className="absolute top-1/3 -left-32 w-[26rem] h-[26rem] rounded-full bg-primary/25 blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-[28rem] h-[28rem] rounded-full bg-yellow-400/10 blur-3xl" />
+        {/* faint star field */}
+        {Array.from({ length: 18 }).map((_, i) => (
+          <span key={i} className="absolute rounded-full bg-white/40"
+            style={{
+              top: `${(i * 53) % 100}%`,
+              left: `${(i * 37) % 100}%`,
+              width: i % 3 === 0 ? 3 : 2,
+              height: i % 3 === 0 ? 3 : 2,
+              opacity: 0.25 + (i % 4) * 0.1,
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center pt-8 mb-8">
-          <div className="inline-flex items-center gap-2 bg-white/10 text-green-200 px-4 py-2 rounded-full text-sm font-bold mb-4 backdrop-blur-sm">
+        <div className="text-center pt-8 mb-6">
+          <div className="inline-flex items-center gap-2 bg-white/10 text-green-100 px-4 py-1.5 rounded-full text-xs font-bold mb-4 backdrop-blur ring-1 ring-inset ring-white/15 uppercase tracking-wider">
+            <span className="w-1.5 h-1.5 rounded-full bg-yellow-300 animate-pulse" />
             {t("tree.badge")}
           </div>
-          <h1 className="font-display text-4xl sm:text-5xl text-white mb-3">
+          <h1 className="font-display text-4xl sm:text-5xl text-white mb-3 drop-shadow-[0_4px_18px_rgba(0,0,0,0.35)]">
             {user?.treeName || "Cây Kỷ Niệm Của Tôi"}
           </h1>
-          <p className="text-green-200 font-medium">
+          <p className="text-green-200/90 font-medium">
             {t("tree.memoriesCount", { count: memories.length })}
           </p>
+
+          {/* Stat strip */}
+          <div className="mt-6 inline-flex flex-wrap justify-center gap-2 bg-white/5 backdrop-blur border border-white/10 rounded-full p-1.5">
+            {[
+              { v: memories.length,                                 l: "leaves" },
+              { v: LEAF_POSITIONS.length - memories.length,         l: "to grow" },
+              { v: weeks.length,                                    l: "weeks" },
+            ].map(s => (
+              <div key={s.l} className="px-4 py-1.5 rounded-full bg-white/5">
+                <span className="font-display text-lg text-white leading-none mr-1.5">{s.v}</span>
+                <span className="text-[10px] uppercase tracking-wider text-green-200/80 font-bold">{s.l}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Tree SVG */}
         <div className="flex justify-center mb-6">
           <div className="relative w-full max-w-2xl">
-            <svg viewBox="0 0 480 480" className="w-full drop-shadow-2xl">
+            {/* Halo behind tree */}
+            <div aria-hidden className="absolute inset-0 flex items-center justify-center">
+              <div className="w-[70%] h-[70%] rounded-full bg-gradient-to-br from-yellow-200/15 via-primary/10 to-transparent blur-3xl" />
+            </div>
+            <svg viewBox="0 0 480 480" className="relative w-full drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)]">
               {/* Stars */}
               {[[20,30],[440,20],[460,120],[15,200],[455,300]].map(([x,y],i) => (
                 <circle key={i} cx={x} cy={y} r="2" fill="white" opacity="0.4"/>
@@ -395,40 +434,47 @@ export function MemoryTreePage() {
 
         {/* Add memory CTA */}
         <div className="text-center mb-10">
-          <Btn size="lg" variant="secondary" className="border-white text-white hover:bg-white/20 bg-white/10"
-            onClick={() => setShowUpload(true)}>
-            {t("tree.addMemory")}
+          <Btn size="lg" variant="gold" onClick={() => setShowUpload(true)}>
+            ✨ {t("tree.addMemory")}
           </Btn>
         </div>
 
         {/* Timeline */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-white">
-          <h3 className="font-display text-2xl mb-5">{t("tree.timeline.title")}</h3>
+        <div className="bg-white/[0.06] backdrop-blur-xl border border-white/10 rounded-3xl p-6 text-white shadow-[0_30px_60px_-30px_rgba(0,0,0,0.6)]">
+          <div className="flex items-center justify-between mb-5">
+            <h3 className="font-display text-2xl">{t("tree.timeline.title")}</h3>
+            <span className="text-xs font-bold text-green-200/80 uppercase tracking-wider">
+              {memories.length} / {LEAF_POSITIONS.length}
+            </span>
+          </div>
           {weeks.length === 0 ? (
             <p className="text-green-300 text-sm font-medium text-center py-4">{t("tree.timeline.empty")}</p>
           ) : (
-            <div className="space-y-4">
+            <div className="space-y-5">
               {weeks.map(week => {
                 const weekMems = memories.filter(m => m.week === week);
                 return (
-                  <div key={week}>
-                    <div className="text-xs font-bold text-green-300 mb-2 uppercase tracking-wider">
+                  <div key={week} className="relative pl-6">
+                    <span aria-hidden className="absolute left-1.5 top-1.5 bottom-1 w-px bg-gradient-to-b from-yellow-300/70 via-white/20 to-transparent" />
+                    <span aria-hidden className="absolute left-0 top-1 w-3 h-3 rounded-full bg-yellow-300 ring-4 ring-yellow-300/20" />
+                    <div className="text-xs font-bold text-green-200/90 mb-2 uppercase tracking-wider">
                       {t("tree.timeline.week", { n: week })}
                     </div>
                     <div className="flex flex-col gap-2">
                       {weekMems.map(m => (
                         <button key={m.id} onClick={() => setSelectedMemory(m)}
-                          className="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-2xl p-3 text-left transition-colors w-full cursor-pointer border-0">
-                          <div className="w-8 h-8 rounded-xl flex items-center justify-center text-lg bg-white/10 flex-shrink-0">
+                          className="group flex items-center gap-3 bg-white/[0.06] hover:bg-white/[0.12] rounded-2xl p-3 text-left transition-all w-full cursor-pointer border border-white/5 hover:border-white/15 hover:-translate-y-px">
+                          <div className="w-10 h-10 rounded-2xl flex items-center justify-center text-lg bg-gradient-to-br from-white/15 to-white/5 ring-1 ring-inset ring-white/10 flex-shrink-0 group-hover:scale-105 transition-transform">
                             {m.emoji}
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="font-bold text-sm truncate">{m.title}</div>
-                            <div className="text-green-300 text-xs font-medium">{m.date}</div>
+                            <div className="text-green-200/70 text-xs font-medium">{m.date}</div>
                           </div>
                           {m.aiGenerated && (
-                            <span className="bg-yellow-400/20 text-yellow-300 text-xs px-2 py-1 rounded-full font-bold flex-shrink-0">{t("tree.timeline.ai")}</span>
+                            <span className="bg-yellow-300/15 text-yellow-200 text-[10px] uppercase tracking-wider px-2 py-1 rounded-full font-bold flex-shrink-0 ring-1 ring-inset ring-yellow-300/30">{t("tree.timeline.ai")}</span>
                           )}
+                          <span aria-hidden className="text-white/30 group-hover:text-white/70 transition-colors">→</span>
                         </button>
                       ))}
                     </div>
