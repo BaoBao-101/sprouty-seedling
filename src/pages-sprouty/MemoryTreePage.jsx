@@ -9,6 +9,7 @@ import { Btn } from "../components/sprouty-ui/Btn";
 import { Modal } from "../components/sprouty-ui/Modal";
 import { Field, Input, Textarea } from "../components/sprouty-ui/Field";
 import { compressImage, validateVideo, getFileCategory } from "../utils/compress";
+import { Facebook, Twitter, Linkedin, Send, MessageCircle, Link as LinkIcon, Download, Share2 } from "lucide-react";
 
 const LEAF_POSITIONS = [
   { cx: 105, cy: 105, fill: "#FF8A65" }, { cx: 370, cy:  90, fill: "#F48FB1" },
@@ -263,6 +264,84 @@ function UploadModal({ isOpen, onClose }) {
 
 function MemoryDetailModal({ memory, onClose }) {
   const { t } = useTranslation();
+  const [shareOpen, setShareOpen] = useState(false);
+  const { showToast } = useToast();
+
+  const shareUrl = typeof window !== "undefined" ? window.location.href : "";
+  const shareText = memory ? `${memory.title}\n\n${memory.caption ?? ""}` : "";
+
+  const buildImageDataUrl = () => {
+    const canvas = document.createElement("canvas");
+    canvas.width = 1080;
+    canvas.height = 1080;
+    const ctx = canvas.getContext("2d");
+    const grad = ctx.createLinearGradient(0, 0, 1080, 1080);
+    grad.addColorStop(0, "#FFE8D6");
+    grad.addColorStop(1, "#D4E7C5");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, 1080, 1080);
+    ctx.fillStyle = "#FFFFFFAA";
+    ctx.fillRect(60, 60, 960, 960);
+    ctx.font = "420px serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(memory?.img ?? "🌱", 540, 440);
+    ctx.fillStyle = "#5C3A21";
+    ctx.font = "bold 56px sans-serif";
+    ctx.fillText(memory?.title ?? "", 540, 760);
+    ctx.fillStyle = "#6B4423";
+    ctx.font = "36px sans-serif";
+    const words = (memory?.caption ?? "").split(" ");
+    let line = "";
+    let y = 840;
+    for (const w of words) {
+      const test = line + w + " ";
+      if (ctx.measureText(test).width > 900) {
+        ctx.fillText(line, 540, y);
+        line = w + " ";
+        y += 48;
+        if (y > 980) break;
+      } else line = test;
+    }
+    if (y <= 980) ctx.fillText(line, 540, y);
+    return canvas.toDataURL("image/png");
+  };
+
+  const handleSaveImage = () => {
+    const dataUrl = buildImageDataUrl();
+    const a = document.createElement("a");
+    a.href = dataUrl;
+    a.download = `${(memory?.title ?? "memory").replace(/\s+/g, "-")}.png`;
+    a.click();
+    showToast?.("Đã lưu ảnh");
+  };
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      showToast?.("Đã sao chép liên kết");
+    } catch {
+      showToast?.("Không thể sao chép");
+    }
+  };
+
+  const openShare = (url) => window.open(url, "_blank", "noopener,noreferrer,width=600,height=600");
+
+  const socials = [
+    { key: "fb", label: "Facebook", Icon: Facebook, color: "#1877F2",
+      onClick: () => openShare(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`) },
+    { key: "tw", label: "X / Twitter", Icon: Twitter, color: "#000000",
+      onClick: () => openShare(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`) },
+    { key: "li", label: "LinkedIn", Icon: Linkedin, color: "#0A66C2",
+      onClick: () => openShare(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`) },
+    { key: "tg", label: "Telegram", Icon: Send, color: "#26A5E4",
+      onClick: () => openShare(`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`) },
+    { key: "wa", label: "WhatsApp", Icon: MessageCircle, color: "#25D366",
+      onClick: () => openShare(`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + " " + shareUrl)}`) },
+    { key: "copy", label: "Sao chép link", Icon: LinkIcon, color: "#6B4423", onClick: handleCopyLink },
+    { key: "save", label: "Lưu ảnh", Icon: Download, color: "#C2410C", onClick: handleSaveImage },
+  ];
+
   return (
     <Modal isOpen={!!memory} onClose={onClose} title={memory?.title ?? ""}>
       {memory && (
@@ -284,8 +363,35 @@ function MemoryDetailModal({ memory, onClose }) {
           </div>
           <div className="flex gap-3">
             <Btn className="flex-1 justify-center" size="sm">{t("tree.detail.like")}</Btn>
-            <Btn variant="secondary" className="flex-1 justify-center" size="sm">{t("tree.detail.share")}</Btn>
+            <Btn variant="secondary" className="flex-1 justify-center" size="sm" onClick={() => setShareOpen(s => !s)}>
+              <Share2 size={16} className="mr-1.5" />
+              {t("tree.detail.share")}
+            </Btn>
           </div>
+
+          {shareOpen && (
+            <div className="mt-4 rounded-2xl border border-border/60 bg-card/80 backdrop-blur p-4 animate-in fade-in slide-in-from-bottom-2">
+              <p className="text-xs font-semibold text-muted-foreground mb-3 uppercase tracking-wide">Chia sẻ tới</p>
+              <div className="grid grid-cols-4 gap-3">
+                {socials.map(({ key, label, Icon, color, onClick }) => (
+                  <button
+                    key={key}
+                    onClick={onClick}
+                    className="flex flex-col items-center gap-1.5 p-2 rounded-xl hover:bg-primary/10 transition group"
+                    title={label}
+                  >
+                    <span
+                      className="w-11 h-11 rounded-full flex items-center justify-center text-white shadow-sm group-hover:scale-110 transition"
+                      style={{ backgroundColor: color }}
+                    >
+                      <Icon size={20} />
+                    </span>
+                    <span className="text-[10px] font-medium text-foreground/80 text-center leading-tight">{label}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       )}
     </Modal>
