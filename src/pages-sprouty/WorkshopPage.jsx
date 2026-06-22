@@ -112,17 +112,24 @@ export function WorkshopPage({ setPage }) {
 
         {/* Kit Showcase */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {KITS.map(kit => (
+          {KITS.map(kit => {
+            const tk = t(`products.kits.${kit.id}`, { returnObjects: true, defaultValue: {} }) || {};
+            const name = tk.name ?? kit.name;
+            const subtitle = tk.subtitle ?? kit.subtitle;
+            const desc = tk.desc ?? kit.desc;
+            const contents = Array.isArray(tk.contents) ? tk.contents : kit.contents;
+            const badge = tk.badge ?? kit.badge;
+            return (
             <div key={kit.id} className={`bg-gradient-to-br ${kit.color} rounded-3xl p-6 text-white relative overflow-hidden flex flex-col`}>
-              {kit.badge && (
-                <span className="absolute top-4 right-4 bg-white/25 text-white text-xs font-bold px-3 py-1 rounded-full">{kit.badge}</span>
+              {badge && (
+                <span className="absolute top-4 right-4 bg-white/25 text-white text-xs font-bold px-3 py-1 rounded-full">{badge}</span>
               )}
               <div className="text-5xl mb-3 text-center">{kit.emoji}</div>
-              <h2 className="font-display text-2xl mb-1">{kit.name}</h2>
-              <p className="text-white/70 text-xs font-medium mb-3">{kit.subtitle}</p>
-              <p className="text-white/80 text-sm leading-relaxed mb-4 flex-1">{kit.desc}</p>
+              <h2 className="font-display text-2xl mb-1">{name}</h2>
+              <p className="text-white/70 text-xs font-medium mb-3">{subtitle}</p>
+              <p className="text-white/80 text-sm leading-relaxed mb-4 flex-1">{desc}</p>
               <div className="flex flex-wrap gap-1.5 mb-5">
-                {kit.contents.map(item => (
+                {contents.map(item => (
                   <span key={item} className="bg-white/20 rounded-full px-2.5 py-1 text-xs font-bold">{item}</span>
                 ))}
               </div>
@@ -132,10 +139,11 @@ export function WorkshopPage({ setPage }) {
                 <span className="bg-white/25 rounded-full px-2 py-0.5 text-xs font-bold">{kit.discount}</span>
               </div>
               <Btn variant="secondary" className="border-white text-white hover:bg-white/20 bg-white/10 w-full justify-center" onClick={() => openOrder(kit)}>
-                {t("workshop.orderBtn", { name: kit.name })}
+                {t("workshop.orderBtn", { name })}
               </Btn>
             </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* How it works */}
@@ -154,22 +162,29 @@ export function WorkshopPage({ setPage }) {
         <div className="mb-12">
           <h2 className="font-display text-3xl text-gray-800 mb-6 text-center">{t("workshop.upcomingTitle")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {WORKSHOPS.map(w => (
+            {WORKSHOPS.map(w => {
+              const tw = t(`products.workshops.${w.id}`, { returnObjects: true, defaultValue: {} }) || {};
+              const name = tw.name ?? w.name;
+              const desc = tw.desc ?? w.desc;
+              const date = tw.date ?? w.date;
+              const includes = tw.includes ?? w.includes;
+              return (
               <Card key={w.id} className={`p-5 border-2 ${w.color}`}>
                 <span className="text-4xl block mb-3">{w.emoji}</span>
-                <h3 className="font-display text-lg text-gray-800 mb-1">{w.name}</h3>
-                <p className="text-xs text-gray-500 font-medium mb-3 leading-relaxed">{w.desc}</p>
+                <h3 className="font-display text-lg text-gray-800 mb-1">{name}</h3>
+                <p className="text-xs text-gray-500 font-medium mb-3 leading-relaxed">{desc}</p>
                 <div className="flex flex-col gap-1 mb-4 text-xs font-bold text-gray-600">
-                  <span>📅 {w.date}</span>
+                  <span>📅 {date}</span>
                   <span>👥 {t("workshop.spotsLeft", { n: w.spots })}</span>
-                  <span>📦 {w.includes}</span>
+                  <span>📦 {includes}</span>
                 </div>
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-display text-xl text-gray-800">{formatVND(w.price)}</span>
                 </div>
                 <Btn size="sm" variant="secondary" className="w-full justify-center" onClick={() => openOrder(w)}>{t("workshop.register")}</Btn>
               </Card>
-            ))}
+              );
+            })}
           </div>
         </div>
 
@@ -177,26 +192,33 @@ export function WorkshopPage({ setPage }) {
         <div>
           <h2 className="font-display text-3xl text-gray-800 mb-6 text-center">{t("workshop.pricingTitle")}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-            {PLANS.map(plan => (
+            {PLANS.map(plan => {
+              const tp = t(`products.plans.${plan.id}`, { returnObjects: true, defaultValue: {} }) || {};
+              const name = tp.name ?? plan.name;
+              const period = tp.period ?? plan.period;
+              const btn = tp.btn ?? plan.btn;
+              const features = Array.isArray(tp.features) ? tp.features : plan.features;
+              return (
               <div key={plan.id} className={`bg-white rounded-3xl p-6 border-2 ${plan.featured ? "border-green-400 shadow-lg shadow-green-100 scale-105" : "border-gray-100"}`}>
                 {plan.featured && <div className="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full inline-block mb-3">{t("workshop.popular")}</div>}
-                <h3 className="font-display text-2xl text-gray-800 mb-1">{plan.name}</h3>
+                <h3 className="font-display text-2xl text-gray-800 mb-1">{name}</h3>
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="font-display text-3xl text-gray-800">{formatVND(plan.price)}</span>
-                  <span className="text-gray-400 text-sm font-medium">{plan.period}</span>
+                  <span className="text-gray-400 text-sm font-medium">{period}</span>
                 </div>
                 <ul className="space-y-2 mb-6">
-                  {plan.features.map(f => (
+                  {features.map(f => (
                     <li key={f} className="flex items-center gap-2 text-sm font-medium text-gray-600">
                       <span className="text-green-500 text-base">✓</span> {f}
                     </li>
                   ))}
                 </ul>
                 <Btn variant={plan.variant} className="w-full justify-center" onClick={() => openOrder(KITS.find(k => k.id === plan.id) ?? KITS[0])}>
-                  {plan.btn}
+                  {btn}
                 </Btn>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
