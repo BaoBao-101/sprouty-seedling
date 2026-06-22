@@ -21,7 +21,11 @@
   "landing": {
     "hero": {
       "badge": "🌍 Nature-Powered Memories for Families",
-      "title": { "grow": "Grow", "memories": "Memories", "together": "Together" },
+      "title": {
+        "grow": "Grow",
+        "memories": "Memories",
+        "together": "Together"
+      },
       "subtitle": "Plant real seeds, paint your pot, and watch memories bloom — your child's very own magical growing world.",
       "ctaTree": "🌳 See the Memory Tree",
       "ctaKit": "🎨 Get Your Kit"
@@ -51,12 +55,30 @@
       "badge": "🌿 Everything in One Magical World",
       "heading": "What Makes Sprouty Special",
       "items": {
-        "tree":   { "title": "Digital Memory Tree", "desc": "Each leaf holds a photo, video or journal entry. Watch your tree grow as your child grows." },
-        "pot":    { "title": "Paint Your Pot", "desc": "Decorate a real terracotta pot with acrylic paints. Every pot is a one-of-a-kind masterpiece." },
-        "ai":     { "title": "AI Story Magic", "desc": "AI creates cute captions and monthly story recaps so every memory has its own fairy tale." },
-        "buddy":  { "title": "Plant Buddy Collection", "desc": "Collect rare plant buddies with personalities, stages and special powers to unlock." },
-        "vip":    { "title": "VIP Golden Garden", "desc": "Unlock nighttime mode, seasonal effects and the legendary golden memory tree." },
-        "family": { "title": "Family Memories", "desc": "Share milestones with grandparents. Print your tree as a keepsake photo book." }
+        "tree": {
+          "title": "Digital Memory Tree",
+          "desc": "Each leaf holds a photo, video or journal entry. Watch your tree grow as your child grows."
+        },
+        "pot": {
+          "title": "Paint Your Pot",
+          "desc": "Decorate a real terracotta pot with acrylic paints. Every pot is a one-of-a-kind masterpiece."
+        },
+        "ai": {
+          "title": "AI Story Magic",
+          "desc": "AI creates cute captions and monthly story recaps so every memory has its own fairy tale."
+        },
+        "buddy": {
+          "title": "Plant Buddy Collection",
+          "desc": "Collect rare plant buddies with personalities, stages and special powers to unlock."
+        },
+        "vip": {
+          "title": "VIP Golden Garden",
+          "desc": "Unlock nighttime mode, seasonal effects and the legendary golden memory tree."
+        },
+        "family": {
+          "title": "Family Memories",
+          "desc": "Share milestones with grandparents. Print your tree as a keepsake photo book."
+        }
       }
     },
     "cta": {
@@ -89,7 +111,9 @@
       "password": "Password must be at least 6 characters",
       "server": "Wrong email or password. Please try again!"
     },
-    "toast": { "welcome": "Welcome back to Sprouty! 🌱" }
+    "toast": {
+      "welcome": "Welcome back to Sprouty! 🌱"
+    }
   },
   "register": {
     "title": "Join Sprouty!",
@@ -161,8 +185,17 @@
     "dayMode": "☀️ Day Mode",
     "nightMode": "🌙 Preview Night Mode",
     "plans": {
-      "monthly": { "name": "VIP Monthly", "period": "/month", "btn": "Start VIP" },
-      "annual":  { "name": "VIP Annual",  "period": "/year", "save": "Save 25%", "btn": "✨ Subscribe Annually" }
+      "monthly": {
+        "name": "VIP Monthly",
+        "period": "/month",
+        "btn": "Start VIP"
+      },
+      "annual": {
+        "name": "VIP Annual",
+        "period": "/year",
+        "save": "Save 25%",
+        "btn": "✨ Subscribe Annually"
+      }
     },
     "footer": "🔒 Cancel anytime · Family-safe · No ads",
     "stripeLoading": "Redirecting to Stripe...",
@@ -182,7 +215,9 @@
       "ai": "✨ AI"
     },
     "upload": {
-      "photo": "Photo", "video": "Video", "journal": "Journal",
+      "photo": "Photo",
+      "video": "Video",
+      "journal": "Journal",
       "dropJournal": "Write your journal entry below",
       "dropFile": "Click to upload or drag here",
       "fileHint": "JPG, PNG · Auto-compressed → WebP ≤300 KB · MP4 ≤2 MB",
@@ -196,12 +231,15 @@
       "clickToRetry": "Click to try again",
       "titleLabel": "Memory title 🌟",
       "captionLabel": "Describe the moment ✍️",
-      "aiBtn": "✨ AI Caption", "aiLoading": "🌀 Generating...",
+      "aiBtn": "✨ AI Caption",
+      "aiLoading": "🌀 Generating...",
       "captionPlaceholder": "Tell the story... or let AI write it for you ✨",
-      "save": "🌿 Save to My Tree", "saving": "🌱 Saving...",
+      "save": "🌿 Save to My Tree",
+      "saving": "🌱 Saving...",
       "toast": "Memory saved to your Memory Tree! 🌿",
       "uploadError": "Upload failed. Please try again 😢",
-      "defaultTitle": "Memory #{{n}}", "defaultCaption": "A wonderful moment 💚"
+      "defaultTitle": "Memory #{{n}}",
+      "defaultCaption": "A wonderful moment 💚"
     },
     "detail": {
       "aiCaption": "✨ AI Caption",
@@ -234,21 +272,42 @@
     "register": "Register →",
     "orderBtn": "🛒 Order {{name}}",
     "howItWorks": [
-      { "icon": "🎨", "title": "Paint Your Pot",       "desc": "Use acrylic paints to decorate your pot any way you like. Your pot, your art — no two pots alike!" },
-      { "icon": "🌱", "title": "Choose a Plant Buddy", "desc": "Pick your favourite buddy — tomato, chilli, beans or corn. Each one has its own personality!" },
-      { "icon": "💧", "title": "Grow Together",        "desc": "Water daily and watch your plant grow. Each milestone adds a new leaf to your digital Memory Tree!" },
-      { "icon": "📸", "title": "Capture Memories",    "desc": "Take photos, record videos, write journal entries. Your digital tree blooms with every memory!" }
+      {
+        "icon": "🎨",
+        "title": "Paint Your Pot",
+        "desc": "Use acrylic paints to decorate your pot any way you like. Your pot, your art — no two pots alike!"
+      },
+      {
+        "icon": "🌱",
+        "title": "Choose a Plant Buddy",
+        "desc": "Pick your favourite buddy — tomato, chilli, beans or corn. Each one has its own personality!"
+      },
+      {
+        "icon": "💧",
+        "title": "Grow Together",
+        "desc": "Water daily and watch your plant grow. Each milestone adds a new leaf to your digital Memory Tree!"
+      },
+      {
+        "icon": "📸",
+        "title": "Capture Memories",
+        "desc": "Take photos, record videos, write journal entries. Your digital tree blooms with every memory!"
+      }
     ],
     "order": {
       "title": "🛒 Place Order",
       "product": "Product 🛍️",
-      "nameLabel": "Parent / child name 👶", "namePlaceholder": "E.g. Sarah, Tom...",
+      "nameLabel": "Parent / child name 👶",
+      "namePlaceholder": "E.g. Sarah, Tom...",
       "emailLabel": "Contact email 📧",
-      "noteLabel": "Additional notes 📝", "noteOptional": "(optional)",
+      "noteLabel": "Additional notes 📝",
+      "noteOptional": "(optional)",
       "notePlaceholder": "Delivery address, special requests...",
       "submit": "🛒 Order · {{price}}",
       "noPayment": "No payment now · We'll contact you to confirm",
-      "errors": { "name": "Please enter a name", "email": "Invalid email address" },
+      "errors": {
+        "name": "Please enter a name",
+        "email": "Invalid email address"
+      },
       "stripeBtn": "💳 Pay with Stripe",
       "stripeLoading": "Redirecting to Stripe...",
       "stripeError": "Could not connect to payment. Please try again.",
@@ -257,13 +316,26 @@
     }
   },
   "chat": {
-    "modes": { "sales": "🛒 Product Advisor", "care": "🌿 Plant Care Assistant", "stem": "🔧 STEM Mentor" },
+    "modes": {
+      "sales": "🛒 Product Advisor",
+      "care": "🌿 Plant Care Assistant",
+      "stem": "🔧 STEM Mentor"
+    },
     "placeholder": "Message...",
-    "aria": { "close": "Close chat", "open": "Open chat", "send": "Send message" },
-    "kitCard": { "view": "View details →" },
-    "workshopCard": { "register": "Register now →" },
+    "aria": {
+      "close": "Close chat",
+      "open": "Open chat",
+      "send": "Send message"
+    },
+    "kitCard": {
+      "view": "View details →"
+    },
+    "workshopCard": {
+      "register": "Register now →"
+    },
     "upsellCard": {
-      "title": "STEM Mentor", "subtitle": "Advanced plan only",
+      "title": "STEM Mentor",
+      "subtitle": "Advanced plan only",
       "desc": "Upgrade to ESP32 Advanced Kit to unlock Arduino C++, Firebase, and in-depth IoT guidance! 🚀",
       "btn": "Upgrade now ✨"
     }
@@ -291,5 +363,110 @@
   },
   "language": {
     "select": "Choose language"
+  },
+  "products": {
+    "kits": {
+      "standard-kit": {
+        "name": "Standard Kit",
+        "subtitle": "Pure handcraft",
+        "desc": "The perfect starter set — a blank pot, seeds, soil and the Sprouty magic!",
+        "badge": "",
+        "contents": [
+          "🪴 Terracotta pot",
+          "🎨 6 acrylic paints",
+          "🌱 3 seed varieties",
+          "🌍 Potting soil",
+          "📖 Guide book",
+          "📱 Sprouty app"
+        ]
+      },
+      "smart-kit": {
+        "name": "Smart Kit",
+        "subtitle": "Local IoT · Arduino",
+        "desc": "Smart Kit with local IoT sensors — OLED shows plant emotions, LEDs glow with status!",
+        "badge": "🔥 Best seller",
+        "contents": [
+          "📦 Full Standard Kit",
+          "🔌 Arduino Nano V3",
+          "📺 OLED 0.96\" display",
+          "💧 Soil moisture sensor",
+          "⏰ RTC DS3231 module",
+          "💡 WS2812B RGB LEDs"
+        ]
+      },
+      "advanced-kit": {
+        "name": "Advanced Kit",
+        "subtitle": "IoT Cloud · ESP32",
+        "desc": "Premium kit with ESP32 Wi-Fi — auto-syncs to the cloud and pings parents' phones!",
+        "badge": "⭐ VIP",
+        "contents": [
+          "📦 Full Standard Kit",
+          "⚡ ESP32 4MB Flash (Wi-Fi)",
+          "📺 OLED 1.3\" display",
+          "💧 Capacitive sensor",
+          "🔋 Rechargeable lithium",
+          "☁️ Firebase realtime sync"
+        ]
+      }
+    },
+    "workshops": {
+      "basic-workshop": {
+        "name": "Basic Workshop",
+        "includes": "Standard Kit + 1 session",
+        "date": "Sat 14/06 · 10:00",
+        "desc": "Paint the pot + plant seeds + Sprouty account setup. Great for kids 4–10 and the whole family!"
+      },
+      "smart-workshop": {
+        "name": "Smart Kit Workshop",
+        "includes": "Smart Kit + 1 session",
+        "date": "Sun 22/06 · 14:00",
+        "desc": "Wire the circuit + hook up sensors + decorate the pot. For kids 10+ and STEM-loving parents."
+      },
+      "advanced-workshop": {
+        "name": "Advanced Workshop",
+        "includes": "Advanced Kit + 1 STEM session",
+        "date": "Sat 28/06 · 11:00",
+        "desc": "Arduino C++ programming + Firebase API. For students 10–18 who want real IoT!"
+      }
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "period": "one-time",
+        "btn": "Get started",
+        "features": [
+          "1 Standard Kit",
+          "Basic Memory Tree",
+          "10 memory leaves",
+          "3 Plant Buddies"
+        ]
+      },
+      "family": {
+        "name": "Family",
+        "period": "workshop bundle",
+        "btn": "Best value 🌟",
+        "features": [
+          "Standard Kit + session",
+          "Full Memory Tree",
+          "Unlimited memory leaves",
+          "All Plant Buddies",
+          "AI Captions",
+          "Family sharing"
+        ]
+      },
+      "vip": {
+        "name": "VIP Garden",
+        "period": "premium kit",
+        "btn": "Go VIP ✨",
+        "features": [
+          "Advanced Kit ESP32",
+          "Glowing Golden Tree",
+          "Rare Plant Buddies",
+          "Seasonal effects",
+          "Monthly AI journal",
+          "Priority support"
+        ]
+      }
+    }
   }
 }

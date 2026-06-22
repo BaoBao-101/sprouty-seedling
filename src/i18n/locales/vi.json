@@ -21,7 +21,11 @@
   "landing": {
     "hero": {
       "badge": "🌍 Kỷ Niệm Từ Thiên Nhiên Cho Gia Đình",
-      "title": { "grow": "Gieo", "memories": "Ký Niệm", "together": "Cùng Nhau" },
+      "title": {
+        "grow": "Gieo",
+        "memories": "Ký Niệm",
+        "together": "Cùng Nhau"
+      },
       "subtitle": "Gieo hạt giống thật, vẽ chậu cây, và ngắm kỷ niệm nở hoa — thế giới diệu kỳ của riêng bé.",
       "ctaTree": "🌳 Xem Cây Kỷ Niệm",
       "ctaKit": "🎨 Nhận Bộ Kit"
@@ -51,12 +55,30 @@
       "badge": "🌿 Tất Cả Trong Một Thế Giới Diệu Kỳ",
       "heading": "Điều Gì Khiến Sprouty Đặc Biệt",
       "items": {
-        "tree":   { "title": "Cây Kỷ Niệm Số", "desc": "Mỗi chiếc lá lưu một ảnh, video hay nhật ký. Ngắm cây lớn lên cùng bé." },
-        "pot":    { "title": "Vẽ Chậu Của Bé", "desc": "Trang trí chậu đất nung thật bằng màu acrylic. Mỗi chậu là một tác phẩm độc nhất." },
-        "ai":     { "title": "Phép Màu Câu Chuyện AI", "desc": "AI tạo chú thích dễ thương và tóm tắt câu chuyện hàng tháng để mỗi kỷ niệm có câu chuyện cổ tích riêng." },
-        "buddy":  { "title": "Bộ Sưu Tập Bạn Cây", "desc": "Sưu tầm những bạn cây hiếm có tính cách, giai đoạn và sức mạnh đặc biệt để mở khóa." },
-        "vip":    { "title": "Khu Vườn Vàng VIP", "desc": "Mở khóa chế độ ban đêm, hiệu ứng theo mùa và cây kỷ niệm vàng huyền thoại." },
-        "family": { "title": "Kỷ Niệm Gia Đình", "desc": "Chia sẻ cột mốc với ông bà. In cây của bạn thành sách ảnh lưu niệm." }
+        "tree": {
+          "title": "Cây Kỷ Niệm Số",
+          "desc": "Mỗi chiếc lá lưu một ảnh, video hay nhật ký. Ngắm cây lớn lên cùng bé."
+        },
+        "pot": {
+          "title": "Vẽ Chậu Của Bé",
+          "desc": "Trang trí chậu đất nung thật bằng màu acrylic. Mỗi chậu là một tác phẩm độc nhất."
+        },
+        "ai": {
+          "title": "Phép Màu Câu Chuyện AI",
+          "desc": "AI tạo chú thích dễ thương và tóm tắt câu chuyện hàng tháng để mỗi kỷ niệm có câu chuyện cổ tích riêng."
+        },
+        "buddy": {
+          "title": "Bộ Sưu Tập Bạn Cây",
+          "desc": "Sưu tầm những bạn cây hiếm có tính cách, giai đoạn và sức mạnh đặc biệt để mở khóa."
+        },
+        "vip": {
+          "title": "Khu Vườn Vàng VIP",
+          "desc": "Mở khóa chế độ ban đêm, hiệu ứng theo mùa và cây kỷ niệm vàng huyền thoại."
+        },
+        "family": {
+          "title": "Kỷ Niệm Gia Đình",
+          "desc": "Chia sẻ cột mốc với ông bà. In cây của bạn thành sách ảnh lưu niệm."
+        }
       }
     },
     "cta": {
@@ -89,7 +111,9 @@
       "password": "Mật khẩu cần ít nhất 6 ký tự",
       "server": "Email hoặc mật khẩu không đúng. Thử lại nhé!"
     },
-    "toast": { "welcome": "Chào mừng trở lại Sprouty! 🌱" }
+    "toast": {
+      "welcome": "Chào mừng trở lại Sprouty! 🌱"
+    }
   },
   "register": {
     "title": "Tham gia Sprouty!",
@@ -161,8 +185,17 @@
     "dayMode": "☀️ Chế độ ban ngày",
     "nightMode": "🌙 Xem trước chế độ ban đêm",
     "plans": {
-      "monthly": { "name": "VIP Hàng tháng", "period": "/tháng", "btn": "Bắt đầu VIP" },
-      "annual":  { "name": "VIP Hàng năm",   "period": "/năm",  "save": "Tiết kiệm 25%", "btn": "✨ Đăng ký hàng năm" }
+      "monthly": {
+        "name": "VIP Hàng tháng",
+        "period": "/tháng",
+        "btn": "Bắt đầu VIP"
+      },
+      "annual": {
+        "name": "VIP Hàng năm",
+        "period": "/năm",
+        "save": "Tiết kiệm 25%",
+        "btn": "✨ Đăng ký hàng năm"
+      }
     },
     "footer": "🔒 Huỷ bất cứ lúc nào · An toàn cho gia đình · Không quảng cáo",
     "stripeLoading": "Đang chuyển đến Stripe...",
@@ -182,7 +215,9 @@
       "ai": "✨ AI"
     },
     "upload": {
-      "photo": "Ảnh", "video": "Video", "journal": "Nhật ký",
+      "photo": "Ảnh",
+      "video": "Video",
+      "journal": "Nhật ký",
       "dropJournal": "Viết nhật ký bên dưới",
       "dropFile": "Nhấn để tải lên hoặc kéo vào đây",
       "fileHint": "JPG, PNG · Tự động nén → WebP ≤300 KB · MP4 ≤2 MB",
@@ -196,12 +231,15 @@
       "clickToRetry": "Nhấn để thử lại",
       "titleLabel": "Tiêu đề ký ức 🌟",
       "captionLabel": "Mô tả khoảnh khắc ✍️",
-      "aiBtn": "✨ AI Caption", "aiLoading": "🌀 Đang tạo...",
+      "aiBtn": "✨ AI Caption",
+      "aiLoading": "🌀 Đang tạo...",
       "captionPlaceholder": "Kể về khoảnh khắc này... hoặc để AI viết cho bạn ✨",
-      "save": "🌿 Lưu vào Cây Của Tôi", "saving": "🌱 Đang lưu...",
+      "save": "🌿 Lưu vào Cây Của Tôi",
+      "saving": "🌱 Đang lưu...",
       "toast": "Ký ức đã được lưu vào Cây Kỷ Niệm! 🌿",
       "uploadError": "Tải lên thất bại. Vui lòng thử lại 😢",
-      "defaultTitle": "Ký ức #{{n}}", "defaultCaption": "Một khoảnh khắc tuyệt vời 💚"
+      "defaultTitle": "Ký ức #{{n}}",
+      "defaultCaption": "Một khoảnh khắc tuyệt vời 💚"
     },
     "detail": {
       "aiCaption": "✨ AI Caption",
@@ -234,21 +272,42 @@
     "register": "Đăng ký →",
     "orderBtn": "🛒 Đặt {{name}}",
     "howItWorks": [
-      { "icon": "🎨", "title": "Tô màu chậu",      "desc": "Dùng màu acrylic để tô chậu theo ý thích. Chậu của bạn, nghệ thuật của bạn — không chậu nào giống chậu nào!" },
-      { "icon": "🌱", "title": "Chọn Plant Buddy",  "desc": "Chọn bạn cây yêu thích — cà chua, ớt, đậu hay bắp. Mỗi bé đều có tính cách riêng!" },
-      { "icon": "💧", "title": "Cùng nhau lớn lên", "desc": "Tưới nước mỗi ngày, nhìn cây lớn dần. Mỗi cột mốc thêm một lá mới lên Cây Kỷ Niệm số!" },
-      { "icon": "📸", "title": "Lưu giữ ký ức",    "desc": "Chụp ảnh, quay video, viết nhật ký. Cây số của bạn nở hoa theo mỗi ký ức!" }
+      {
+        "icon": "🎨",
+        "title": "Tô màu chậu",
+        "desc": "Dùng màu acrylic để tô chậu theo ý thích. Chậu của bạn, nghệ thuật của bạn — không chậu nào giống chậu nào!"
+      },
+      {
+        "icon": "🌱",
+        "title": "Chọn Plant Buddy",
+        "desc": "Chọn bạn cây yêu thích — cà chua, ớt, đậu hay bắp. Mỗi bé đều có tính cách riêng!"
+      },
+      {
+        "icon": "💧",
+        "title": "Cùng nhau lớn lên",
+        "desc": "Tưới nước mỗi ngày, nhìn cây lớn dần. Mỗi cột mốc thêm một lá mới lên Cây Kỷ Niệm số!"
+      },
+      {
+        "icon": "📸",
+        "title": "Lưu giữ ký ức",
+        "desc": "Chụp ảnh, quay video, viết nhật ký. Cây số của bạn nở hoa theo mỗi ký ức!"
+      }
     ],
     "order": {
       "title": "🛒 Đặt hàng",
       "product": "Sản phẩm 🛍️",
-      "nameLabel": "Tên phụ huynh / bé 👶", "namePlaceholder": "VD: Chị Lan, bé Mia...",
+      "nameLabel": "Tên phụ huynh / bé 👶",
+      "namePlaceholder": "VD: Chị Lan, bé Mia...",
       "emailLabel": "Email liên hệ 📧",
-      "noteLabel": "Ghi chú thêm 📝", "noteOptional": "(tuỳ chọn)",
+      "noteLabel": "Ghi chú thêm 📝",
+      "noteOptional": "(tuỳ chọn)",
       "notePlaceholder": "Địa chỉ giao hàng, yêu cầu đặc biệt...",
       "submit": "🛒 Đặt hàng · {{price}}",
       "noPayment": "Không cần thanh toán ngay · Chúng tôi liên hệ xác nhận trước",
-      "errors": { "name": "Vui lòng nhập tên", "email": "Email không hợp lệ" },
+      "errors": {
+        "name": "Vui lòng nhập tên",
+        "email": "Email không hợp lệ"
+      },
       "stripeBtn": "💳 Thanh toán với Stripe",
       "stripeLoading": "Đang chuyển đến Stripe...",
       "stripeError": "Không thể kết nối thanh toán. Thử lại sau.",
@@ -257,13 +316,26 @@
     }
   },
   "chat": {
-    "modes": { "sales": "🛒 Tư vấn sản phẩm", "care": "🌿 Trợ lý chăm cây", "stem": "🔧 STEM Mentor" },
+    "modes": {
+      "sales": "🛒 Tư vấn sản phẩm",
+      "care": "🌿 Trợ lý chăm cây",
+      "stem": "🔧 STEM Mentor"
+    },
     "placeholder": "Nhắn tin...",
-    "aria": { "close": "Đóng chat", "open": "Mở chat", "send": "Gửi tin nhắn" },
-    "kitCard": { "view": "Xem chi tiết →" },
-    "workshopCard": { "register": "Đăng ký ngay →" },
+    "aria": {
+      "close": "Đóng chat",
+      "open": "Mở chat",
+      "send": "Gửi tin nhắn"
+    },
+    "kitCard": {
+      "view": "Xem chi tiết →"
+    },
+    "workshopCard": {
+      "register": "Đăng ký ngay →"
+    },
     "upsellCard": {
-      "title": "STEM Mentor", "subtitle": "Dành cho gói Advanced",
+      "title": "STEM Mentor",
+      "subtitle": "Dành cho gói Advanced",
       "desc": "Nâng cấp lên ESP32 Advanced Kit để mở khóa hướng dẫn Arduino C++, Firebase và IoT chuyên sâu! 🚀",
       "btn": "Nâng cấp ngay ✨"
     }
@@ -291,5 +363,110 @@
   },
   "language": {
     "select": "Chọn ngôn ngữ"
+  },
+  "products": {
+    "kits": {
+      "standard-kit": {
+        "name": "Standard Kit",
+        "subtitle": "Thuần thủ công",
+        "desc": "Bộ khởi đầu hoàn hảo — chậu trắng, hạt giống, đất và phép màu Sprouty!",
+        "badge": "",
+        "contents": [
+          "🪴 Chậu đất nung",
+          "🎨 6 màu acrylic",
+          "🌱 3 loại hạt giống",
+          "🌍 Đất trồng",
+          "📖 Sách hướng dẫn",
+          "📱 App Sprouty"
+        ]
+      },
+      "smart-kit": {
+        "name": "Smart Kit",
+        "subtitle": "Local IoT · Arduino",
+        "desc": "Smart Kit với cảm biến IoT cục bộ — OLED hiển thị biểu cảm cây, LED báo hiệu theo màu!",
+        "badge": "🔥 Bán chạy",
+        "contents": [
+          "📦 Standard Kit đầy đủ",
+          "🔌 Arduino Nano V3",
+          "📺 Màn hình OLED 0.96\"",
+          "💧 Cảm biến độ ẩm đất",
+          "⏰ Module RTC DS3231",
+          "💡 LED RGB WS2812B"
+        ]
+      },
+      "advanced-kit": {
+        "name": "Advanced Kit",
+        "subtitle": "IoT Cloud · ESP32",
+        "desc": "Kit cao cấp với ESP32 Wi-Fi — tự động đồng bộ lên cloud, thông báo đến điện thoại phụ huynh!",
+        "badge": "⭐ VIP",
+        "contents": [
+          "📦 Standard Kit đầy đủ",
+          "⚡ ESP32 4MB Flash (Wi-Fi)",
+          "📺 Màn hình OLED 1.3\"",
+          "💧 Cảm biến điện dung",
+          "🔋 Pin lithium sạc được",
+          "☁️ Đồng bộ Firebase real-time"
+        ]
+      }
+    },
+    "workshops": {
+      "basic-workshop": {
+        "name": "Basic Workshop",
+        "includes": "Standard Kit + 1 buổi học",
+        "date": "Thứ 7, 14/06 · 10:00",
+        "desc": "Tô màu chậu + trồng cây + setup tài khoản Sprouty. Phù hợp bé 4–10 tuổi và cả gia đình!"
+      },
+      "smart-workshop": {
+        "name": "Smart Kit Workshop",
+        "includes": "Smart Kit + 1 buổi học",
+        "date": "Chủ nhật, 22/06 · 14:00",
+        "desc": "Lắp ráp mạch điện + kết nối cảm biến + trang trí chậu. Dành cho bé 10+ và phụ huynh yêu STEM."
+      },
+      "advanced-workshop": {
+        "name": "Advanced Workshop",
+        "includes": "Advanced Kit + 1 buổi STEM",
+        "date": "Thứ 7, 28/06 · 11:00",
+        "desc": "Lập trình Arduino C++ + kết nối Firebase API. Cho học sinh 10–18 tuổi muốn làm IoT thật sự!"
+      }
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "period": "một lần",
+        "btn": "Bắt đầu ngay",
+        "features": [
+          "1 Standard Kit",
+          "Cây Kỷ Niệm cơ bản",
+          "10 lá ký ức",
+          "3 Plant Buddies"
+        ]
+      },
+      "family": {
+        "name": "Family",
+        "period": "gói workshop",
+        "btn": "Giá trị nhất 🌟",
+        "features": [
+          "Standard Kit + buổi học",
+          "Cây Kỷ Niệm đầy đủ",
+          "Lá ký ức không giới hạn",
+          "Tất cả Plant Buddies",
+          "AI Caption",
+          "Chia sẻ gia đình"
+        ]
+      },
+      "vip": {
+        "name": "VIP Garden",
+        "period": "kit cao cấp",
+        "btn": "Lên VIP ✨",
+        "features": [
+          "Advanced Kit ESP32",
+          "Cây Vàng chói lọi",
+          "Plant Buddies hiếm",
+          "Hiệu ứng theo mùa",
+          "Nhật ký AI hàng tháng",
+          "Hỗ trợ ưu tiên"
+        ]
+      }
+    }
   }
 }
