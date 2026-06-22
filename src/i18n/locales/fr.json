@@ -21,7 +21,11 @@
   "landing": {
     "hero": {
       "badge": "🌍 Des souvenirs au naturel pour les familles",
-      "title": { "grow": "Cultivez des", "memories": "Souvenirs", "together": "Ensemble" },
+      "title": {
+        "grow": "Cultivez des",
+        "memories": "Souvenirs",
+        "together": "Ensemble"
+      },
       "subtitle": "Plantez de vraies graines, peignez votre pot et regardez les souvenirs éclore — le monde magique rien que pour votre enfant.",
       "ctaTree": "🌳 Voir l'Arbre à Souvenirs",
       "ctaKit": "🎨 Obtenir votre kit"
@@ -51,12 +55,30 @@
       "badge": "🌿 Tout dans un seul monde magique",
       "heading": "Ce qui rend Sprouty si spécial",
       "items": {
-        "tree":   { "title": "Arbre à Souvenirs Numérique", "desc": "Chaque feuille contient une photo, une vidéo ou une note. Regardez votre arbre grandir avec votre enfant." },
-        "pot":    { "title": "Peignez votre pot", "desc": "Décorez un vrai pot en terre cuite avec de la peinture acrylique. Chaque pot est une œuvre unique." },
-        "ai":     { "title": "La Magie des Histoires IA", "desc": "L'IA crée de jolies légendes et des récits mensuels pour que chaque souvenir ait son conte de fées." },
-        "buddy":  { "title": "Collection d'Amis Plantes", "desc": "Collectionnez des amis plantes rares avec leur caractère, leurs étapes et leurs pouvoirs spéciaux à débloquer." },
-        "vip":    { "title": "Jardin Doré VIP", "desc": "Débloquez le mode nuit, les effets saisonniers et le légendaire arbre à souvenirs doré." },
-        "family": { "title": "Souvenirs en Famille", "desc": "Partagez les grands moments avec les grands-parents. Imprimez votre arbre en album souvenir." }
+        "tree": {
+          "title": "Arbre à Souvenirs Numérique",
+          "desc": "Chaque feuille contient une photo, une vidéo ou une note. Regardez votre arbre grandir avec votre enfant."
+        },
+        "pot": {
+          "title": "Peignez votre pot",
+          "desc": "Décorez un vrai pot en terre cuite avec de la peinture acrylique. Chaque pot est une œuvre unique."
+        },
+        "ai": {
+          "title": "La Magie des Histoires IA",
+          "desc": "L'IA crée de jolies légendes et des récits mensuels pour que chaque souvenir ait son conte de fées."
+        },
+        "buddy": {
+          "title": "Collection d'Amis Plantes",
+          "desc": "Collectionnez des amis plantes rares avec leur caractère, leurs étapes et leurs pouvoirs spéciaux à débloquer."
+        },
+        "vip": {
+          "title": "Jardin Doré VIP",
+          "desc": "Débloquez le mode nuit, les effets saisonniers et le légendaire arbre à souvenirs doré."
+        },
+        "family": {
+          "title": "Souvenirs en Famille",
+          "desc": "Partagez les grands moments avec les grands-parents. Imprimez votre arbre en album souvenir."
+        }
       }
     },
     "cta": {
@@ -89,7 +111,9 @@
       "password": "Le mot de passe doit comporter au moins 6 caractères",
       "server": "E-mail ou mot de passe incorrect. Réessayez !"
     },
-    "toast": { "welcome": "Bon retour sur Sprouty ! 🌱" }
+    "toast": {
+      "welcome": "Bon retour sur Sprouty ! 🌱"
+    }
   },
   "register": {
     "title": "Rejoignez Sprouty !",
@@ -161,8 +185,17 @@
     "dayMode": "☀️ Mode Jour",
     "nightMode": "🌙 Aperçu Mode Nuit",
     "plans": {
-      "monthly": { "name": "VIP Mensuel",  "period": "/mois", "btn": "Démarrer VIP" },
-      "annual":  { "name": "VIP Annuel",   "period": "/an",  "save": "Économisez 25 %", "btn": "✨ S'abonner annuellement" }
+      "monthly": {
+        "name": "VIP Mensuel",
+        "period": "/mois",
+        "btn": "Démarrer VIP"
+      },
+      "annual": {
+        "name": "VIP Annuel",
+        "period": "/an",
+        "save": "Économisez 25 %",
+        "btn": "✨ S'abonner annuellement"
+      }
     },
     "footer": "🔒 Résiliable à tout moment · Sécurisé pour la famille · Sans publicité",
     "stripeLoading": "Redirection vers Stripe...",
@@ -182,7 +215,9 @@
       "ai": "✨ IA"
     },
     "upload": {
-      "photo": "Photo", "video": "Vidéo", "journal": "Journal",
+      "photo": "Photo",
+      "video": "Vidéo",
+      "journal": "Journal",
       "dropJournal": "Écrivez votre entrée de journal ci-dessous",
       "dropFile": "Cliquez pour télécharger ou glissez ici",
       "fileHint": "JPG, PNG · Compressé auto → WebP ≤300 Ko · MP4 ≤2 Mo",
@@ -196,12 +231,15 @@
       "clickToRetry": "Cliquez pour réessayer",
       "titleLabel": "Titre du souvenir 🌟",
       "captionLabel": "Décrivez le moment ✍️",
-      "aiBtn": "✨ Légende IA", "aiLoading": "🌀 Génération...",
+      "aiBtn": "✨ Légende IA",
+      "aiLoading": "🌀 Génération...",
       "captionPlaceholder": "Racontez l'histoire... ou laissez l'IA l'écrire ✨",
-      "save": "🌿 Sauvegarder dans Mon Arbre", "saving": "🌱 Sauvegarde...",
+      "save": "🌿 Sauvegarder dans Mon Arbre",
+      "saving": "🌱 Sauvegarde...",
       "toast": "Souvenir ajouté à votre Arbre à Souvenirs ! 🌿",
       "uploadError": "Échec du téléchargement. Veuillez réessayer 😢",
-      "defaultTitle": "Souvenir #{{n}}", "defaultCaption": "Un moment merveilleux 💚"
+      "defaultTitle": "Souvenir #{{n}}",
+      "defaultCaption": "Un moment merveilleux 💚"
     },
     "detail": {
       "aiCaption": "✨ Légende IA",
@@ -234,17 +272,35 @@
     "register": "S'inscrire →",
     "orderBtn": "🛒 Commander {{name}}",
     "howItWorks": [
-      { "icon": "🎨", "title": "Peignez votre pot",        "desc": "Utilisez de la peinture acrylique pour décorer votre pot comme vous le souhaitez. Votre pot, votre art !" },
-      { "icon": "🌱", "title": "Choisissez un Ami Plante", "desc": "Choisissez votre compagnon préféré — tomate, piment, haricot ou maïs. Chacun a sa propre personnalité !" },
-      { "icon": "💧", "title": "Grandissez ensemble",      "desc": "Arrosez chaque jour et regardez votre plante grandir. Chaque étape ajoute une nouvelle feuille à votre arbre !" },
-      { "icon": "📸", "title": "Capturez les souvenirs",   "desc": "Prenez des photos, filmez, écrivez. Votre arbre numérique fleurit à chaque souvenir !" }
+      {
+        "icon": "🎨",
+        "title": "Peignez votre pot",
+        "desc": "Utilisez de la peinture acrylique pour décorer votre pot comme vous le souhaitez. Votre pot, votre art !"
+      },
+      {
+        "icon": "🌱",
+        "title": "Choisissez un Ami Plante",
+        "desc": "Choisissez votre compagnon préféré — tomate, piment, haricot ou maïs. Chacun a sa propre personnalité !"
+      },
+      {
+        "icon": "💧",
+        "title": "Grandissez ensemble",
+        "desc": "Arrosez chaque jour et regardez votre plante grandir. Chaque étape ajoute une nouvelle feuille à votre arbre !"
+      },
+      {
+        "icon": "📸",
+        "title": "Capturez les souvenirs",
+        "desc": "Prenez des photos, filmez, écrivez. Votre arbre numérique fleurit à chaque souvenir !"
+      }
     ],
     "order": {
       "title": "🛒 Passer commande",
       "product": "Produit 🛍️",
-      "nameLabel": "Nom du parent / enfant 👶", "namePlaceholder": "Ex. Marie, Tom...",
+      "nameLabel": "Nom du parent / enfant 👶",
+      "namePlaceholder": "Ex. Marie, Tom...",
       "emailLabel": "E-mail de contact 📧",
-      "noteLabel": "Notes supplémentaires 📝", "noteOptional": "(facultatif)",
+      "noteLabel": "Notes supplémentaires 📝",
+      "noteOptional": "(facultatif)",
       "notePlaceholder": "Adresse de livraison, demandes spéciales...",
       "submit": "🛒 Commander · {{price}}",
       "noPayment": "Pas de paiement immédiat · Nous vous contactons pour confirmer",
@@ -256,13 +312,26 @@
     }
   },
   "chat": {
-    "modes": { "sales": "🛒 Conseiller produit", "care": "🌿 Assistant jardinage", "stem": "🔧 Mentor STEM" },
+    "modes": {
+      "sales": "🛒 Conseiller produit",
+      "care": "🌿 Assistant jardinage",
+      "stem": "🔧 Mentor STEM"
+    },
     "placeholder": "Message...",
-    "aria": { "close": "Fermer le chat", "open": "Ouvrir le chat", "send": "Envoyer" },
-    "kitCard": { "view": "Voir les détails →" },
-    "workshopCard": { "register": "S'inscrire →" },
+    "aria": {
+      "close": "Fermer le chat",
+      "open": "Ouvrir le chat",
+      "send": "Envoyer"
+    },
+    "kitCard": {
+      "view": "Voir les détails →"
+    },
+    "workshopCard": {
+      "register": "S'inscrire →"
+    },
     "upsellCard": {
-      "title": "Mentor STEM", "subtitle": "Formule Advanced uniquement",
+      "title": "Mentor STEM",
+      "subtitle": "Formule Advanced uniquement",
       "desc": "Passez à l'ESP32 Advanced Kit pour débloquer les guides Arduino C++, Firebase et IoT avancé ! 🚀",
       "btn": "Passer à la version supérieure ✨"
     }
@@ -290,5 +359,110 @@
   },
   "language": {
     "select": "Choisir la langue"
+  },
+  "products": {
+    "kits": {
+      "standard-kit": {
+        "name": "Kit Standard",
+        "subtitle": "Artisanat pur",
+        "desc": "Le kit de départ parfait — pot vierge, graines, terre et magie Sprouty !",
+        "badge": "",
+        "contents": [
+          "🪴 Pot en terre cuite",
+          "🎨 6 peintures acryliques",
+          "🌱 3 variétés de graines",
+          "🌍 Terreau",
+          "📖 Livret de guide",
+          "📱 App Sprouty"
+        ]
+      },
+      "smart-kit": {
+        "name": "Kit Smart",
+        "subtitle": "IoT local · Arduino",
+        "desc": "Kit Smart avec capteurs IoT locaux — OLED affiche les émotions de la plante, LEDs colorées !",
+        "badge": "🔥 Best-seller",
+        "contents": [
+          "📦 Kit Standard complet",
+          "🔌 Arduino Nano V3",
+          "📺 Écran OLED 0,96\"",
+          "💧 Capteur d'humidité du sol",
+          "⏰ Module RTC DS3231",
+          "💡 LEDs RGB WS2812B"
+        ]
+      },
+      "advanced-kit": {
+        "name": "Kit Avancé",
+        "subtitle": "IoT Cloud · ESP32",
+        "desc": "Kit premium avec ESP32 Wi-Fi — synchronisation cloud automatique, notifications aux parents !",
+        "badge": "⭐ VIP",
+        "contents": [
+          "📦 Kit Standard complet",
+          "⚡ ESP32 4Mo Flash (Wi-Fi)",
+          "📺 Écran OLED 1,3\"",
+          "💧 Capteur capacitif",
+          "🔋 Lithium rechargeable",
+          "☁️ Sync Firebase temps réel"
+        ]
+      }
+    },
+    "workshops": {
+      "basic-workshop": {
+        "name": "Atelier Basic",
+        "includes": "Kit Standard + 1 séance",
+        "date": "Sam 14/06 · 10h00",
+        "desc": "Peindre le pot + planter + configurer le compte Sprouty. Pour enfants 4–10 ans et la famille !"
+      },
+      "smart-workshop": {
+        "name": "Atelier Smart Kit",
+        "includes": "Kit Smart + 1 séance",
+        "date": "Dim 22/06 · 14h00",
+        "desc": "Monter le circuit + brancher les capteurs + décorer le pot. Pour enfants 10+ et parents STEM."
+      },
+      "advanced-workshop": {
+        "name": "Atelier Avancé",
+        "includes": "Kit Avancé + 1 séance STEM",
+        "date": "Sam 28/06 · 11h00",
+        "desc": "Programmation Arduino C++ + API Firebase. Pour élèves 10–18 ans passionnés d'IoT !"
+      }
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter",
+        "period": "unique",
+        "btn": "Commencer",
+        "features": [
+          "1 Kit Standard",
+          "Arbre Souvenir basique",
+          "10 feuilles de souvenirs",
+          "3 Plant Buddies"
+        ]
+      },
+      "family": {
+        "name": "Family",
+        "period": "pack atelier",
+        "btn": "Meilleur rapport 🌟",
+        "features": [
+          "Kit Standard + séance",
+          "Arbre Souvenir complet",
+          "Feuilles illimitées",
+          "Tous les Plant Buddies",
+          "Légendes IA",
+          "Partage familial"
+        ]
+      },
+      "vip": {
+        "name": "VIP Garden",
+        "period": "kit premium",
+        "btn": "Passer VIP ✨",
+        "features": [
+          "Kit Avancé ESP32",
+          "Arbre d'Or éclatant",
+          "Plant Buddies rares",
+          "Effets saisonniers",
+          "Journal IA mensuel",
+          "Support prioritaire"
+        ]
+      }
+    }
   }
 }
