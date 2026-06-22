@@ -109,11 +109,10 @@ export function LoginPage() {
           </div>
         </Card>
 
-        <div className="mt-4 text-center">
-          <button onClick={handleSkip}
-            className="text-xs text-muted-foreground hover:text-foreground font-medium cursor-pointer bg-transparent border-0 underline underline-offset-2">
+        <div className="mt-6 flex justify-center">
+          <Btn variant="secondary" size="md" onClick={handleSkip} className="w-full">
             {t("login.demo")}
-          </button>
+          </Btn>
         </div>
       </div>
     </div>

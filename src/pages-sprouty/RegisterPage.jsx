@@ -24,7 +24,7 @@ function validate(form, t) {
 
 export function RegisterPage() {
   const { t } = useTranslation();
-  const { register } = useAuth();
+  const { register, skipToDemo } = useAuth();
   const { showToast } = useToast();
   const formatVND = useFormatVND();
   const navigate = useNavigate();
