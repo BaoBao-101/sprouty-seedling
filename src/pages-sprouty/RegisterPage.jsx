@@ -47,6 +47,8 @@ export function RegisterPage() {
     setServerError("");
   };
 
+  const handleSkip = () => { skipToDemo(); navigate("/dashboard", { replace: true }); };
+
   const handleSubmit = async () => {
     const errs = validate(form, t);
     if (Object.keys(errs).length) { setErrors(errs); return; }
