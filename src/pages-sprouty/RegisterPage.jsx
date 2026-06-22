@@ -24,7 +24,7 @@ function validate(form, t) {
 
 export function RegisterPage() {
   const { t } = useTranslation();
-  const { register } = useAuth();
+  const { register, skipToDemo } = useAuth();
   const { showToast } = useToast();
   const formatVND = useFormatVND();
   const navigate = useNavigate();
@@ -46,6 +46,8 @@ export function RegisterPage() {
     if (errors[field]) setErrors(e => ({ ...e, [field]: "" }));
     setServerError("");
   };
+
+  const handleSkip = () => { skipToDemo(); navigate("/dashboard", { replace: true }); };
 
   const handleSubmit = async () => {
     const errs = validate(form, t);
@@ -158,6 +160,12 @@ export function RegisterPage() {
             </div>
           </div>
         </Card>
+
+        <div className="mt-6 flex justify-center">
+          <Btn variant="secondary" size="md" onClick={handleSkip} className="w-full">
+            {t("login.demo")}
+          </Btn>
+        </div>
       </div>
     </div>
   );
