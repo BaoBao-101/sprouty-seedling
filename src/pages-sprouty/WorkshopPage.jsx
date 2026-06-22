@@ -16,6 +16,17 @@ function OrderModal({ isOpen, onClose, initialProduct }) {
   const [selectedProduct, setSelectedProduct] = useState(initialProduct ?? KITS[0]);
   const [loading, setLoading] = useState(false);
 
+  const productName = (p) => {
+    if (!p) return "";
+    const isKit = KITS.some(k => k.id === p.id);
+    return t(`products.${isKit ? "kits" : "workshops"}.${p.id}.name`, { defaultValue: p.name });
+  };
+  const productSubInfo = (p) => {
+    if (!p) return "";
+    const isKit = KITS.some(k => k.id === p.id);
+    return t(`products.${isKit ? "kits" : "workshops"}.${p.id}.${isKit ? "subtitle" : "includes"}`, { defaultValue: p.includes ?? p.subtitle ?? "" });
+  };
+
   const handleCheckout = async () => {
     setLoading(true);
     try {
@@ -48,8 +59,8 @@ function OrderModal({ isOpen, onClose, initialProduct }) {
                 className={`flex items-center gap-3 p-3 rounded-2xl border-2 text-left transition-all cursor-pointer ${selectedProduct.id === p.id ? "border-orange-400 bg-orange-50" : "border-gray-200 bg-white hover:border-gray-300"}`}>
                 <span className="text-2xl">{p.emoji}</span>
                 <div className="flex-1 min-w-0">
-                  <div className="font-bold text-sm text-gray-800">{p.name}</div>
-                  <div className="text-xs text-gray-400 truncate">{p.includes ?? p.subtitle}</div>
+                  <div className="font-bold text-sm text-gray-800">{productName(p)}</div>
+                  <div className="text-xs text-gray-400 truncate">{productSubInfo(p)}</div>
                 </div>
                 <span className="font-bold text-orange-600 text-sm flex-shrink-0">{formatVND(p.price)}</span>
               </button>
@@ -60,8 +71,8 @@ function OrderModal({ isOpen, onClose, initialProduct }) {
         {/* Order summary */}
         <div className="bg-orange-50 rounded-2xl p-4 flex items-center justify-between">
           <div>
-            <div className="font-bold text-gray-800 text-sm">{selectedProduct.name}</div>
-            <div className="text-xs text-gray-500">{selectedProduct.includes ?? selectedProduct.subtitle}</div>
+            <div className="font-bold text-gray-800 text-sm">{productName(selectedProduct)}</div>
+            <div className="text-xs text-gray-500">{productSubInfo(selectedProduct)}</div>
           </div>
           <span className="font-display text-xl text-orange-600">{formatVND(selectedProduct.price)}</span>
         </div>
