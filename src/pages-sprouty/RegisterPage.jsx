@@ -160,6 +160,12 @@ export function RegisterPage() {
             </div>
           </div>
         </Card>
+
+        <div className="mt-6 flex justify-center">
+          <Btn variant="secondary" size="md" onClick={handleSkip} className="w-full">
+            {t("login.demo")}
+          </Btn>
+        </div>
       </div>
     </div>
   );
